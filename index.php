@@ -1,1 +1,1 @@
-Max ist ein Hurensohn
+Max ist ein Max
