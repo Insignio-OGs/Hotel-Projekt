@@ -1,1 +1,1 @@
-jan ist dumm
+Max ist ein Hurensohn
