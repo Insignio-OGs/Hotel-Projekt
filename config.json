@@ -1,0 +1,6 @@
+{
+  "db_host": "localhost",
+  "db_password": "root",
+  "db_user": "root",
+  "db_name": "HotelProjekt"
+}
