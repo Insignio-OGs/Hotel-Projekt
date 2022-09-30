@@ -27,7 +27,13 @@ class DBHandler {
      */
     function getPrimaryKey($tableName) {
         try {
+            //TODO: Testen sobald die getTableNames funktion existeirt
+            $tableNames = $this->getTableNames();
+            if(!in_array($tableName, $tableNames)) {
+                return false;
+            }
             $res = mysqli_query($this->conn, "SHOW INDEX FROM " . $tableName . " WHERE Key_name = 'PRIMARY'");
+            $res = $this->conn->query($this->conn, "SHOW INDEX FROM " . $tableName . " WHERE Key_name = 'PRIMARY'");
         } catch (Exception $e) {
             return false;
         }
@@ -36,8 +42,7 @@ class DBHandler {
             return false;
         }
 
-        $cRow = mysqli_fetch_assoc($res);
-        $column_name = $cRow["Column_name"];
-        return $column_name;
+        $cRow = $res->fetch_assoc();
+        return $cRow["Column_name"];
     }
 }
