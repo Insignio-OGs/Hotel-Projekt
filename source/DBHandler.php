@@ -32,7 +32,7 @@ class DBHandler {
             if(!in_array($tableName, $tableNames)) {
                 return false;
             }
-            $res = $this->conn->query($this->conn, "SHOW INDEX FROM " . $tableName . " WHERE Key_name = 'PRIMARY'");
+            $res = $this->conn->query("SHOW INDEX FROM " . $tableName . " WHERE Key_name = 'PRIMARY'");
         } catch (Exception $e) {
             return false;
         }
