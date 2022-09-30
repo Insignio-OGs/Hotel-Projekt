@@ -27,10 +27,10 @@ class DBHandler {
      */
     function getColumnNames($tableName) {
         $res = mysqli_query($this->conn, "SHOW COLUMNS FROM " . $tableName);
-        if(!$res) {
+        if (!$res) {
             return false;
         }
-        while($cRow = mysqli_fetch_assoc($res)){
+        while ($cRow = mysqli_fetch_assoc($res)) {
             $column_name[] = $cRow["Field"];
         }
         return $column_name;
