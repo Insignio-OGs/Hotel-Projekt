@@ -29,7 +29,10 @@ class DBHandler
      * @return array|false
      */
     public function getRow($table, $id) {
-        //TODO check table name with getTableNames()
+        $tableNames = $this->getTableNames();
+        if (!in_array($table, $tableNames)) {
+            return false;
+        }
         $sql = 'SELECT * FROM '.$table.' WHERE id = ?;';
         $stmt = $this->conn->prepare($sql);
 
@@ -57,7 +60,10 @@ class DBHandler
      * @return array|false
      */
     public function getTableArray($table) {
-        //TODO check table name with getTableNames()
+        $tableNames = $this->getTableNames();
+        if (!in_array($table, $tableNames)) {
+            return false;
+        }
         $sql = 'SELECT * FROM '.$table.';';
 
         try {
@@ -88,12 +94,11 @@ class DBHandler
      * @return array|false
      */
     function getColumnNames($tableName) {
+        $tableNames = $this->getTableNames();
+        if (!in_array($tableName, $tableNames)) {
+            return false;
+        }
         try {
-            //TODO: Testen sobald die getTableNames funktion existiert
-            $tableNames = $this->getTableNames();
-            if (!in_array($tableName, $tableNames)) {
-                return false;
-            }
             $res = $this->conn->query("SHOW COLUMNS FROM " . $tableName);
         } catch (Exception $e) {
             return false;
@@ -116,12 +121,11 @@ class DBHandler
      * @return false|mixed
      */
     function getPrimaryKey($tableName) {
+        $tableNames = $this->getTableNames();
+        if(!in_array($tableName, $tableNames)) {
+            return false;
+        }
         try {
-            //TODO: Testen sobald die getTableNames funktion existeirt
-            $tableNames = $this->getTableNames();
-            if(!in_array($tableName, $tableNames)) {
-                return false;
-            }
             $res = $this->conn->query("SHOW INDEX FROM " . $tableName . " WHERE Key_name = 'PRIMARY'");
         } catch (Exception $e) {
             return false;
@@ -149,6 +153,7 @@ class DBHandler
             return false;
         }
 
+        $tableNames = array();
         while ($cRow = $res->fetch_assoc()) {
             $tableNames[] = $cRow["Tables_in_hotelprojekt"];
         }
