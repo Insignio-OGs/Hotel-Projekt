@@ -26,7 +26,7 @@ class DBHandler {
      */
     function getTableNames() {
         try {
-            $res = mysqli_query($this->conn, "SHOW TABLES");
+            $res = $this->conn->query("SHOW TABLES");
         } catch (Exception $e) {
             return false;
         }
@@ -34,7 +34,7 @@ class DBHandler {
             return false;
         }
 
-        while ($cRow = mysqli_fetch_assoc($res)) {
+        while ($cRow = $res->fetch_assoc()) {
             $tableNames[] = $cRow["Tables_in_hotelprojekt"];
         }
         return $tableNames;
