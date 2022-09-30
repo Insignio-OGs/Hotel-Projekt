@@ -1,1 +1,5 @@
-Max ist ein Max
+<?php
+
+require_once('source/include.php');
+
+echo('LUL');
