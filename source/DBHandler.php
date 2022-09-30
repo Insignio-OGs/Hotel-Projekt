@@ -81,4 +81,77 @@ class DBHandler
             return false;
         }
     }
+
+    /**
+     * Returns all column names from a table as array
+     * @param $tableName
+     * @return array|false
+     */
+    function getColumnNames($tableName) {
+        try {
+            //TODO: Testen sobald die getTableNames funktion existiert
+            $tableNames = $this->getTableNames();
+            if (!in_array($tableName, $tableNames)) {
+                return false;
+            }
+            $res = $this->conn->query("SHOW COLUMNS FROM " . $tableName);
+        } catch (Exception $e) {
+            return false;
+        }
+        if (!$res) {
+            return false;
+        }
+        $column_name = array();
+        while ($cRow = $res->fetch_assoc()) {
+            $column_name[] = $cRow["Field"];
+        }
+        return $column_name;
+    }
+
+
+
+    /**
+     * get Primarykey Columnname
+     * @param $tableName
+     * @return false|mixed
+     */
+    function getPrimaryKey($tableName) {
+        try {
+            //TODO: Testen sobald die getTableNames funktion existeirt
+            $tableNames = $this->getTableNames();
+            if(!in_array($tableName, $tableNames)) {
+                return false;
+            }
+            $res = $this->conn->query("SHOW INDEX FROM " . $tableName . " WHERE Key_name = 'PRIMARY'");
+        } catch (Exception $e) {
+            return false;
+        }
+
+        if (!$res) {
+            return false;
+        }
+
+        $cRow = $res->fetch_assoc();
+        return $cRow["Column_name"];
+    }
+
+    /**
+     * Returns all table names as array
+     * @return array|false
+     */
+    function getTableNames() {
+        try {
+            $res = $this->conn->query("SHOW TABLES");
+        } catch (Exception $e) {
+            return false;
+        }
+        if (!$res) {
+            return false;
+        }
+
+        while ($cRow = $res->fetch_assoc()) {
+            $tableNames[] = $cRow["Tables_in_hotelprojekt"];
+        }
+        return $tableNames;
+    }
 }
