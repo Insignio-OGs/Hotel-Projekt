@@ -109,4 +109,29 @@ class DBHandler
     }
 
 
+
+    /**
+     * get Primarykey Columnname
+     * @param $tableName
+     * @return false|mixed
+     */
+    function getPrimaryKey($tableName) {
+        try {
+            //TODO: Testen sobald die getTableNames funktion existeirt
+            $tableNames = $this->getTableNames();
+            if(!in_array($tableName, $tableNames)) {
+                return false;
+            }
+            $res = $this->conn->query("SHOW INDEX FROM " . $tableName . " WHERE Key_name = 'PRIMARY'");
+        } catch (Exception $e) {
+            return false;
+        }
+
+        if (!$res) {
+            return false;
+        }
+
+        $cRow = $res->fetch_assoc();
+        return $cRow["Column_name"];
+    }
 }
