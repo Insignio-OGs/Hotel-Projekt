@@ -159,4 +159,32 @@ class DBHandler
         }
         return $tableNames;
     }
+
+    /**
+     * returns all pricing info for a specified car
+     * @param $roomId
+     * @return array|false
+     */
+    function getPricingForCar($carId) {
+
+        if(empty($carId)) {return false;}
+        if(!is_int($carId)) {return false;}
+
+        $sql = 'SELECT * FROM getPricingForCar WHERE id = ?;';
+        $stmt = $this->conn->prepare($sql);
+        try {
+            $stmt->bind_param('i',$carId);
+            $stmt->execute();
+            $res = $stmt->get_result();
+        } catch (Exception $e) {
+            return false;
+        }
+
+        $result = $res->fetch_all();
+
+        if(count($result) < 1) {return false;}
+
+        return $result;
+
+    }
 }
