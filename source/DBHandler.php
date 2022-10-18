@@ -249,4 +249,21 @@ class DBHandler
         return $result;
 
     }
+
+    /**
+     * Returns all Cars as array
+     * @return array|false
+     */
+    function getCars($carType = null) {
+        $array = $this->getTableArray('getcars');
+        if ($carType === null)
+            return $array;
+
+        $return = array();
+        foreach ($array as $item) {
+            if ($item['Fahrzeugtyp'] === $carType)
+                $return[] = $item;
+        }
+        return $return;
+    }
 }
