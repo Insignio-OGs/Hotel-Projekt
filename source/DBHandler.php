@@ -159,4 +159,38 @@ class DBHandler
         }
         return $tableNames;
     }
+
+    /**
+     * Returns all rooms of specified type as array
+     * @param $type - roomtype to get, empty for all rooms
+    */
+    function getRooms($type = 'all'){
+
+        $sql = 'SELECT * FROM getRooms';
+
+        if($type !== 'all'){
+            $sql = $sql." WHERE type = ".$type;
+        }
+
+        try {
+            $res = $this->conn->query($sql);
+        } catch (Exception $e) {
+            return false;
+        }
+
+        if (!$res){
+            return false;
+        }
+
+        $array = array();
+        while ($row = $res->fetch_assoc()) {
+            $array[] = $row;
+        }
+
+        if (count($array) > 0) {
+            return $array;
+        } else {
+            return false;
+        }
+    }
 }
