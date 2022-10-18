@@ -160,6 +160,11 @@ class DBHandler
         return $tableNames;
     }
 
+    /**
+     * returns all pricing info for a specified room
+     * @param $roomId
+     * @return array|false
+     */
     function getPricingForRoom($roomId) {
 
         if(empty($roomId)) {return false;}
