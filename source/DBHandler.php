@@ -159,4 +159,32 @@ class DBHandler
         }
         return $tableNames;
     }
+
+    /**
+     * returns all pricing info for a specified room
+     * @param $roomId
+     * @return array|false
+     */
+    function getPricingForRoom($roomId) {
+
+        if(empty($roomId)) {return false;}
+        if(!is_int($roomId)) {return false;}
+
+        $sql = 'SELECT * FROM getPricingForRoom WHERE id = ?;';
+        $stmt = $this->conn->prepare($sql);
+        try {
+            $stmt->bind_param('i',$roomId);
+            $stmt->execute();
+            $res = $stmt->get_result();
+        } catch (Exception $e) {
+            return false;
+        }
+
+        $result = $res->fetch_all();
+
+        if(count($result) < 1) {return false;}
+
+        return $result;
+
+    }
 }
