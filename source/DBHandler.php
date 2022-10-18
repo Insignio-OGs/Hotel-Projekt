@@ -266,4 +266,52 @@ class DBHandler
         }
         return $return;
     }
+
+    /**
+     * Returns all rooms of specified type as array
+     * that are available in the given time frame
+     * @param $start_date - start date for checked time frame
+     * @param $end_date - end date for checked time frame
+     * @param $type - roomtype to get, empty for all rooms
+    */
+    function getAvailableRooms($start_date, $end_date, $type = 'all'){
+
+        $sql = 'SELECT * FROM getrooms
+                RIGHT JOIN room_reservations rr on getrooms.id = rr.room_id
+                WHERE (? < rr.date_start
+                OR   ? > rr.date_end)';
+
+        if($type !== 'all'){
+            $sql = $sql." AND type = ?";
+        }
+
+        $stmt = $this->conn->prepare($sql);
+
+        try {
+            if($type !== 'all'){
+                $stmt->bind_param('sss',$end_date,$start_date,$type);
+            }else{
+                $stmt->bind_param('ss',$end_date,$start_date);
+            }
+            $stmt->execute();
+            $res = $stmt->get_result();
+        } catch (Exception $e) {
+            return false;
+        }
+
+        if (!$res){
+            return false;
+        }
+
+        $array = array();
+        while ($row = $res->fetch_assoc()) {
+            $array[] = $row;
+        }
+
+        if (count($array) > 0) {
+            return $array;
+        } else {
+            return false;
+        }
+    }
 }
