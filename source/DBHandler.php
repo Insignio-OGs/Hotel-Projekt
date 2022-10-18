@@ -163,7 +163,7 @@ class DBHandler
     /**
      * Returns all rooms of specified type as array
      * @param $type - roomtype to get, empty for all rooms
-    */
+     */
     function getRooms($type = 'all'){
 
         $sql = 'SELECT * FROM getRooms';
@@ -192,5 +192,61 @@ class DBHandler
         } else {
             return false;
         }
+    }
+
+    /**
+     * returns all pricing info for a specified car
+     * @param $roomId
+     * @return array|false
+     */
+    function getPricingForCar($carId) {
+
+        if(empty($carId)) {return false;}
+        if(!is_int($carId)) {return false;}
+
+        $sql = 'SELECT * FROM getPricingForCar WHERE id = ?;';
+        $stmt = $this->conn->prepare($sql);
+        try {
+            $stmt->bind_param('i',$carId);
+            $stmt->execute();
+            $res = $stmt->get_result();
+        } catch (Exception $e) {
+            return false;
+        }
+
+        $result = $res->fetch_all();
+
+        if(count($result) < 1) {return false;}
+
+        return $result;
+
+    }
+
+    /**
+     * returns all pricing info for a specified room
+     * @param $roomId
+     * @return array|false
+     */
+    function getPricingForRoom($roomId) {
+
+        if(empty($roomId)) {return false;}
+        if(!is_int($roomId)) {return false;}
+
+        $sql = 'SELECT * FROM getPricingForRoom WHERE id = ?;';
+        $stmt = $this->conn->prepare($sql);
+        try {
+            $stmt->bind_param('i',$roomId);
+            $stmt->execute();
+            $res = $stmt->get_result();
+        } catch (Exception $e) {
+            return false;
+        }
+
+        $result = $res->fetch_all();
+
+        if(count($result) < 1) {return false;}
+
+        return $result;
+
     }
 }
