@@ -1,0 +1,269 @@
+/* ##### Standard ##### */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ##### Navbar ##### */
+.nav-list {
+  background: white;
+  box-shadow: 0px 0px 10px #cfd8dc;
+  padding: 0.8rem 0;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-item {
+  list-style: none;
+  margin-right: 2rem;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: black;
+  transition: all 200ms ease-in;
+}
+
+.nav-item a:hover {
+  color: gray;
+}
+
+.nav-item:first-child {
+  margin-right: auto;
+  margin-left: 2rem;
+}
+
+.nav-item:nth-child(6) {
+    margin-right: 30rem;
+}
+
+.test {
+    display: flex;
+    align-items: center;
+}
+
+.btn-primary {
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  background: #272626;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 200ms ease-in;
+  width: 200px;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: white;
+}
+
+input {
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd8dc;
+    padding: 0.5rem 0;
+    width: 10rem;
+}
+
+img {
+    width: 70%;
+    height: 70%;
+}
+
+.loginLogo {
+    width: 50%;
+    height: 50%;
+}
+
+.loginText {
+    margin-left: 0.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Header */
+.header-img {
+    width: 100%;
+    height: 800px;
+    filter: brightness(65%);
+    z-index: -1;
+    position: absolute;
+}
+
+.header-h1 {
+    position: relative;
+    color: white;
+    font-size: 6rem;
+    text-shadow: 0 0 20px gray;
+    margin-top: 200px;
+}
+
+.header-container {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.header-content-two {
+    width: 60%;
+    height: 150px;
+    background-color: #5c5b5b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+}
+
+h2 {
+    color: white;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.header-content-test {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.header-content-test-two {
+    position: relative;
+}
+
+.header-content-two input {
+    margin-right: 0.5rem;
+}
+
+/* Seciton One */
+.section-one-container {
+    width: 100%;
+    min-height: 2000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.room-product:last-child {
+    margin-bottom: 6rem;
+}
+
+.room-product {
+    width: 60%;
+    height: 320px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px #131313;
+    margin-top: 6rem;
+    display: flex;
+    /* overflow:hidden; */
+}
+
+.productcard-side-one {
+    width: 55%;
+}
+
+.productcard-side-two {
+    width: 45%;
+}
+
+.productcard-side-two-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 2rem 0;
+}
+
+.side-one {
+    margin-right: 3rem;
+}
+
+.side-two {
+    margin-left: 3rem;
+}
+
+.room-product img {
+    width: 100%;
+    height: 100%;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 25px 0 25px 0;
+}
+
+.btn-room-product {
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    background: #272626;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    width: 400px;
+    color: white;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.btn-room-product:hover {
+    background: white;
+}
+
+.productcard-side-two-content span {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+
+.productcard-side-two-content i {
+    margin-right: 0.5rem;
+}
+
+/* Footer */
+.footer-container {
+    width: 100%;
+    height: 400px;
+    background-color: black;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.footer-content h1 {
+    color: white;
+}
