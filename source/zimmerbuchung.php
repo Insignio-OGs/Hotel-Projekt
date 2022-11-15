@@ -27,10 +27,7 @@
                 <a href="kontaktseite.php">Kontaktseite</a>
             </li>
             <li class="nav-item">
-                <a href="impressum.php">Impressum</a>
-            </li>
-            <li class="nav-item">
-                <div class="test">
+                <div class="login-container">
                     <img class="loginLogo" src="images/iconLogin.png" alt="">
                     <a class="loginText" href="login.php"  name="submit">Login</a>
                 </div>
@@ -47,6 +44,23 @@
     </header>
     <section>
         <div class="section-one-container">
+            <div class="section-one-container-background">
+                <div class="header-content-test">
+                    <select name="nights">
+                        <option value="nightOne">1 Nacht</option>
+                        <option value="nightTwo">2 Nächte</option>
+                        <option value="nightThree">3 Nächte</option>
+                        <option value="nightFour">4 Nächte</option>
+                    </select>
+                    <div class="calendar">
+                        <input type="date" id="start" name="trip-start" value="2021-08-01" min="2021-08-01" max="2022-12-31">
+                        <input type="date" id="end" name="trip-end" value="2021-08-01" min="2021-08-01" max="2022-12-31">
+                    </div>    
+                    <input type="text" placeholder="Zimmer">
+                    <input type="text" placeholder="Personen">
+                    <button class="btn-primary">Weiter</button>       
+                </div>  
+            </div> 
             <div class="room-product">
                 <div class="productcard-side-one">
                     <img src="images/einzelzimmer.jpg" alt="lol">
@@ -73,26 +87,27 @@
                             </span>
                         </div>
                         <div class="side-two">
-                        <span>
-                            <i class="bx bx-search"></i>
-                            <p>Kühlschrank</p>
-                        </span>
-                        <span>
-                            <i class="bx bx-search"></i>
-                            <p>Kaffemaschine</p>
-                        </span>
-                        <span>
-                            <i class="bx bx-search"></i>
-                            <p>Klimaanlage</p>
-                        </span>
-                        <span>
-                            <i class="bx bx-search"></i>
-                            <p>Balkon</p>
-                        </span>
+                            <span>
+                                <i class="bx bx-search"></i>
+                                <p>Kühlschrank</p>
+                            </span>
+                            <span>
+                                <i class="bx bx-search"></i>
+                                <p>Kaffemaschine</p>
+                            </span>
+                            <span>
+                                <i class="bx bx-search"></i>
+                                <p>Klimaanlage</p>
+                            </span>
+                            <span>
+                                <i class="bx bx-search"></i>
+                                <p>Balkon</p>
+                            </span>
                         </div>
                     </div>
                     <div class="button">
-                        <button class="btn-room-product">Zimmer auswählen</button>
+                        <a href="zimmerbuchungDetail.php" class="btn-room-product">Zimmer auswählen</a>
+                        <!-- <button class="btn-room-product">Zimmer auswählen</button> -->
                     </div>
                 </div>
             </div>
@@ -141,7 +156,8 @@
                         </div>
                     </div>
                     <div class="button">
-                        <button class="btn-room-product">Zimmer auswählen</button>
+                        <a href="zimmerbuchungDetail.php" class="btn-room-product">Zimmer auswählen</a>
+                        <!-- <button class="btn-room-product">Zimmer auswählen</button> -->
                     </div>
                 </div>
             </div>
@@ -190,7 +206,8 @@
                         </div>
                     </div>
                     <div class="button">
-                        <button class="btn-room-product">Zimmer auswählen</button>
+                        <a href="zimmerbuchungDetail.php" class="btn-room-product">Zimmer auswählen</a>
+                        <!-- <button class="btn-room-product">Zimmer auswählen</button> -->
                     </div>
                 </div>
             </div>
@@ -239,7 +256,8 @@
                         </div>
                     </div>
                     <div class="button">
-                        <button class="btn-room-product">Zimmer auswählen</button>
+                        <a href="zimmerbuchungDetail.php" class="btn-room-product">Zimmer auswählen</a>
+                        <!-- <button class="btn-room-product">Zimmer auswählen</button> -->
                     </div>
                 </div>
             </div>
@@ -249,6 +267,7 @@
         <div class="footer-container">
             <div class="footer-content">
                 <h1 class="footer-h1">Das ist der Footer</h1>
+                <a href="impressum.php">Impressum</a>
             </div>
         </div>
     </footer>
