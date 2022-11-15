@@ -51,7 +51,7 @@
                         <input type="text" class="noeyes" name="subject" value="">
                         <?php echo '<p><input name="date" type="hidden" value="', time(), '" /></p>'; ?>
                         <button class="btn" name="submit">Weiter</button>
-                        <a href="../index.php">Du hast bereits ein Konto?</a>
+                        <a href="../source/login.php">Du hast bereits ein Konto?</a>
                     </form>
                 </div>
             </div>

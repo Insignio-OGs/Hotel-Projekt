@@ -26,10 +26,7 @@
                 <a href="source/kontaktseite.php">Kontaktseite</a>
             </li>
             <li class="nav-item">
-                <a href="source/impressum.php">Impressum</a>
-            </li>
-            <li class="nav-item">
-                <div class="test">
+                <div class="login-container">
                     <img class="loginLogo" src="source/images/iconLogin.png" alt="">
                     <a class="loginText" href="source/login.php"  name="submit">Login</a>
                 </div>
@@ -44,20 +41,20 @@
             </div>
             <div class="header-content-two">
                 <h2>Hier buchen Sie zum günstigsten Preis:</h2>
-                    <div class="header-content-test">
-                        <select name="nights">
-                            <option value="nightOne">1 Nacht</option>
-                            <option value="nightTwo">2 Nächte</option>
-                            <option value="nightThree">3 Nächte</option>
-                            <option value="nightFour">4 Nächte</option>
-                        </select>
-                        <div class="calendar">
-                            <input type="date" id="start" name="trip-start" value="2021-08-01" min="2021-08-01" max="2022-12-31">
-                            <input type="date" id="end" name="trip-end" value="2021-08-01" min="2021-08-01" max="2022-12-31">
-                        </div>    
-                        <input type="text" placeholder="Zimmer">
-                        <input type="text" placeholder="Personen">
-                    <button class="btn-primary">Weiter</button>
+                <div class="header-content-test">
+                    <select name="nights">
+                        <option value="nightOne">1 Nacht</option>
+                        <option value="nightTwo">2 Nächte</option>
+                        <option value="nightThree">3 Nächte</option>
+                        <option value="nightFour">4 Nächte</option>
+                    </select>
+                    <div class="calendar">
+                        <input type="date" id="start" name="trip-start" value="2021-08-01" min="2021-08-01" max="2022-12-31">
+                        <input type="date" id="end" name="trip-end" value="2021-08-01" min="2021-08-01" max="2022-12-31">
+                    </div>    
+                    <input type="text" placeholder="Zimmer">
+                    <input type="text" placeholder="Personen">
+                    <button class="btn-primary">Weiter</button>       
                 </div>   
             </div>
         </div>
@@ -71,6 +68,7 @@
         <div class="footer-container">
             <div class="footer-content">
                 <h1 class="footer-h1">Das ist der Footer</h1>
+                <a href="source/impressum.php">Impressum</a>
             </div>
         </div>
     </footer>
