@@ -38,11 +38,11 @@
                         <a href="forgot-password.php">Passwort vergessen?</a>
                     </div>
                 </form>
-                    <ul class="social">
+                    <!-- <ul class="social">
                         <li><a href="https://www.jumpstartmedia.de/"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="https://www.jumpstartmedia.de/"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="https://www.jumpstartmedia.de/"><i class="fa fa-google"></i></a></li>
-                    </ul>
+                        <li><a href="https://www.jumpstartmedia.de/"><i class="fa fa-google"></i></a></li>
+                    </ul> -->
                 </div>
             </div>
         </div>   
