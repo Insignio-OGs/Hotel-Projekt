@@ -1,0 +1,38 @@
+.footer {
+    &__list {
+        background: white;
+        padding: 1.2rem 0;
+        border-radius: 0.2rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center; 
+    }
+
+    &__item {
+        list-style: none;
+        margin-right: 50px;
+
+        &--first {
+            margin-right: auto;
+            margin-left: 50px;
+        }
+    
+        &--seccond {
+            margin-right: auto;
+            margin-left: 2rem;
+        }
+    }
+
+    &__img {
+        width: 8%;
+        height: 8%;
+        vertical-align: unset;
+    }
+
+    &__headline {
+        color: black;
+        vertical-align: super;
+        font-weight: bold;
+        font-size: 18px;
+    }
+}

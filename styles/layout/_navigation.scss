@@ -1,0 +1,98 @@
+.navigation {
+    &__list {
+        background: white;
+        padding: 1.2rem 0;
+        border-radius: 0.2rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center; 
+    }
+
+    &__item {
+        list-style: none;
+        margin-right: 50px;
+
+        &--first {
+            margin-right: auto;
+            margin-left: 50px;
+        }
+    
+        &--seccond {
+            margin-right: auto;
+            margin-left: 2rem;
+        }
+    }
+
+    &__img {
+        width: 8%;
+        height: 8%;
+        vertical-align: unset;
+    }
+
+    &__headline {
+        color: black;
+        vertical-align: super;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: black;
+        transition: all 200ms ease-in;
+
+        &:hover {
+            color: #ce4c28;
+            .anmelden {
+                text-decoration: underline; 
+                text-underline-offset: 0.2em; 
+                text-decoration-thickness:2.5px;
+                transition: all 200ms ease-in;
+                color: #ce4c28;
+            }
+            .meinProfil {
+                text-decoration: underline; 
+                text-underline-offset: 0.2em; 
+                text-decoration-thickness:2.5px;
+                transition: all 200ms ease-in;
+                color: #ce4c28;
+            }
+
+            .bx {
+                color: #ce4c28;
+                transition: all 200ms ease-in;
+            }
+        }
+
+        &--btn-primary {
+            font-family: Montserrat, sans-serif;
+            font-size: 1rem;
+            background: transparent;
+            border: none;
+            outline: none;
+            border-radius: 0.2rem;
+            padding: 0.5rem 0.5rem;
+            cursor: pointer;
+            transition: all 200ms ease-in;
+        }
+
+        .bx {
+            padding: 0;
+            margin: 0;
+            font-size: 25px;
+        }
+    }
+    
+    &__icon {
+        vertical-align: sub;
+        margin-right: 5px;
+    }
+
+    &__anmelden {
+        color: black;
+        vertical-align: super;
+        font-weight: bold;
+        font-size: 15px;
+        margin-left: 5px;
+    }
+}

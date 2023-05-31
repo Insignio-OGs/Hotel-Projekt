@@ -12,7 +12,7 @@
     <nav>
         <ul class="nav-list">
             <li class="nav-item">
-                <img src="images/iconNav.png" alt="">
+                <img src="../images/iconNav.png" alt="">
             </li>
             <li class="nav-item">
                 <a href="../index.php">Startseite</a>
@@ -28,15 +28,15 @@
             </li>
             <li class="nav-item">
                 <div class="login-container">
-                    <img class="loginLogo" src="images/iconLogin.png" alt="">
-                    <a class="loginText" href="login.php"  name="submit">Login</a>
+                    <img class="loginLogo" src="../images/iconLogin.png" alt="">
+                    <a class="loginText" href="login/indexLogin.php"  name="submit">Login</a>
                 </div>
             </li>
         </ul>
     </nav>
     <header>
         <div class="header-container">
-            <img class="header-img" src="images/headerImage.jpg" alt="">
+            <img class="header-img" src="../images/headerImage.jpg" alt="">
             <div class="header-content">
                 <h1 class="header-h1">Hotel Zimmerbuchung</h1>
             </div>
@@ -63,7 +63,7 @@
             </div> 
             <div class="room-product">
                 <div class="productcard-side-one">
-                    <img src="images/einzelzimmer.jpg" alt="lol">
+                    <img src="../images/einzelzimmer.jpg" alt="lol">
                 </div>
                 <div class="productcard-side-two">
                     <h3>Einzelzimmer</h3>
@@ -113,7 +113,7 @@
             </div>
             <div class="room-product">
                 <div class="productcard-side-one">
-                    <img src="images/doppelzimmer standard.jpg" alt="lol">
+                    <img src="../images/doppelzimmer standard.jpg" alt="lol">
                 </div>
                 <div class="productcard-side-two">
                     <h3>Doppelzimmer Standard</h3>
@@ -163,7 +163,7 @@
             </div>
             <div class="room-product">
                 <div class="productcard-side-one">
-                    <img src="images/doppelzimmer komfort.jpg" alt="lol">
+                    <img src="../images/doppelzimmer komfort.jpg" alt="lol">
                 </div>
                 <div class="productcard-side-two">
                     <h3>Doppelzimmer Komfort</h3>
@@ -213,7 +213,7 @@
             </div>
             <div class="room-product">
                 <div class="productcard-side-one">
-                    <img src="images/familienzimmer.jpg" alt="lol">
+                    <img src="../images/familienzimmer.jpg" alt="lol">
                 </div>
                 <div class="productcard-side-two">
                     <h3>Familienzimmer</h3>
