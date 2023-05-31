@@ -1,0 +1,108 @@
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+.smallTitle {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 6rem;
+}
+
+.dashboard__box {
+    margin-left: 2rem;
+    position: relative;
+    width: 360px;
+    overflow: hidden;
+    margin: 18px;
+}
+
+.dashboardContent  {
+    width: 100%;
+    background-color: #e4e9f7;
+}
+
+.present__img__dashboard {
+    height: 410px;
+    width: 100%;
+    border-radius: 7px;
+    position: absolute;
+    clip: rect(137px 314px 274px 48px);
+}
+
+td {
+    padding: 0 260px 0 10px;
+}
+
+td:nth-child(5) {
+    padding-right: 98px;
+    padding-left: 0px;
+}
+
+.btn-product-dash {
+    background-color: #e74011;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0 5px 0 5px;
+    width: 180%;
+    bottom: 72px;
+    left: 10px;
+}
+
+.create-btn-product-dash {
+    background-color: #e74011;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0 5px 0 5px;
+    width: 95%;
+    bottom: 72px;
+    left: 10px;
+}
+
+.dash__content {
+    display: flex;
+    margin-left: 20px;
+}
+
+.form__dash {
+    margin: 58px;
+}
+
+.detailview__dropdown__dash {
+    width: 330px;
+    background-color: #efefef;
+    border-radius: 0.3rem;
+    border: none;
+    height: 42px;
+    margin-bottom: 0;
+}
+
+.product__input {
+    border-radius: 4px;
+    background-color: #efefef;
+    width: 82%;
+    height: 32px;
+    margin-bottom: 5px;
+}
+
+.product__upload {
+    margin-bottom: 5px;
+}
+
+.h1__dash {
+    margin-bottom: 20px;
+}
+
+
