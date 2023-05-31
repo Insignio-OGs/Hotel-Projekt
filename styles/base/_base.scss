@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::placeholder {
+    color: #777;
+}
+
+.info_icon {
+    position: absolute;
+}
+
+@media(max-width:768px) {
+    .login {
+        flex-direction: column;
+        margin: 0 15px;
+    }
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+// ##### Honeypot Feld(Spamschutz) #####
+.noeyes {
+    display: none;
+}
+
+// ##### PHP error message #####
+.alert {    
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    margin: 0.5rem 0;
+    margin-right: 64px;
+}
+
+.alert-success {
+    background-color: #7bd67e;
+    border: 1px solid rgb(23, 218, 52);
+    margin-right: 64px;
+}
+
+.alert-danger {
+    background-color: rgb(245, 102, 102);
+    border: 1px solid red;
+    margin-right: 64px;
+}
+
+.alert-info {
+    background-color: #71afea;
+    border: 1px solid #2486e1;
+    margin-right: 64px;
+}
+
+.alert-warning {
+    background-color: #ff9966;
+    border: 1px solid #f8702c;
+    margin-right: 64px;
+}
+
+
+// ##### PHP error message #####
+.alert {    
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    margin: 0.5rem 0;
+    margin-right: 64px;
+}
+
+.alert-success {
+    background-color: #7bd67e;
+    border: 1px solid rgb(23, 218, 52);
+    margin-right: 64px;
+}
+
+.alert-danger {
+    background-color: rgb(245, 102, 102);
+    border: 1px solid red;
+    margin-right: 64px;
+}
+
+.alert-info {
+    background-color: #71afea;
+    border: 1px solid #2486e1;
+    margin-right: 64px;
+}
+
+.alert-warning {
+    background-color: #ff9966;
+    border: 1px solid #f8702c;
+    margin-right: 64px;
+}
+
+// ##### Contentblock 3 ColorSelectIcons #####
+.colorSelectIcons {
+    text-align: center;
+}
+
+.colorSelectIcons button {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin: 0 5px 0 5px;
+}
+
+.colorSelectIcons button:first-child {
+    background-color: #f8702c;
+}
+
+.colorSelectIcons button:nth-child(2) {
+    background-color: #13c7e7;
+}
+
+.colorSelectIcons button:nth-child(3) {
+    background-color: #780ef0;
+}
+
+// ##### Close Button #####
+.btn-close {
+    background-color: transparent;
+    border: 0;
+    font-size: 35px;
+    cursor: pointer;
+    position: absolute;
+    right: 847px;
+    top: 299px;
+}
+
+.btn-close-reg {
+    background-color: transparent;
+    border: 0;
+    font-size: 35px;
+    cursor: pointer;
+    position: absolute;
+    right: 847px;
+    top: 280px;
+}
+
+.tbox {
+    border-radius: 4px;
+    background-color: #efefef;
+    width: 82%;
+    height: 32px;
+    margin: 18px 0;
+
+    input {
+        background: transparent;
+        width: 81%;
+        outline: none;
+        border: 0;
+        padding-left: 5px;
+    }
+}
+
+i {
+    color: #000000;
+    font-size: 15px;
+    padding: 7px;
+}
+
+.tbox.success {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.tbox.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+// NOT Successful validation
+.tbox.error input {
+	border-color: #e74c3c;
+}
+
+.tbox p {
+	color: #e74c3c;
+    font-size: 12px;
+}
+
+.tbox.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.tbox .info_icon {
+    visibility: hidden;
+}
+
+.tbox i.fa-exclamation-circle {
+	color: #e74c3c;
+}
+
+.tbox p {
+	color: #e74c3c;
+	visibility: hidden;
+}
+
+.tbox.error p {
+	visibility: visible;
+}
+
+.tbox.error {
+	border-color: #e74c3c;
+}

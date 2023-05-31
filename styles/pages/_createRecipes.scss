@@ -1,0 +1,40 @@
+.create-recipe {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-recipe__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25rem;
+    width: 25rem;
+    box-shadow: 0px 0px 10px #cfd8dc;
+    border-radius: 0.2rem;
+}
+  
+.create-recipe__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.create-recipe_dropdown {
+    margin-top: 15px;
+    width: 100%;
+}
+  
+.create-recipe__btn {
+    border: 1px solid #cccccc; 
+    color: rgb(64, 227, 4); 
+    font-size: 15px; 
+    padding: 10px 45px; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    height: 45px;
+    width: 100%;
+    margin-top: 20px;
+}

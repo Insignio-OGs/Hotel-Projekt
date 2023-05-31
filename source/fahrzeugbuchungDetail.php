@@ -12,7 +12,7 @@
     <nav>
         <ul class="nav-list">
             <li class="nav-item">
-                <img src="images/iconNav.png" alt="">
+                <img src="../images/iconNav.png" alt="">
             </li>
             <li class="nav-item">
                 <a href="../index.php">Startseite</a>
@@ -28,7 +28,7 @@
             </li>
             <li class="nav-item">
                 <div class="login-container">
-                    <img class="loginLogo" src="images/iconLogin.png" alt="">
+                    <img class="loginLogo" src="../images/iconLogin.png" alt="">
                     <a class="loginText" href="login.php"  name="submit">Login</a>
                 </div>
             </li>
@@ -38,12 +38,12 @@
         <div class="zimmerbuchungDetail">
             <div class="zimmberbuchungImgGallery">
                 <div class="zimmberbuchungContent1">
-                    <img src="images/carOne.jpg" alt="">
+                    <img src="../images/carOne.jpg" alt="">
                 </div>
                 <div class="zimmberbuchungContent2">
-                    <img src="images/carTwo.jpg" alt="">
-                    <img src="images/carThree.jpg" alt="">
-                    <img src="images/carFour.jpg" alt="">
+                    <img src="../images/carTwo.jpg" alt="">
+                    <img src="../images/carThree.jpg" alt="">
+                    <img src="../images/carFour.jpg" alt="">
                 </div>
             </div>
             <div class="zimmberbuchungInfo1">

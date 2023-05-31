@@ -1,0 +1,186 @@
+.present {
+    margin: 0 50px 0 50px;
+    margin-bottom: 4rem;
+
+    &__picture {
+        background-image: url("../images/modal/happy-easter-banner-trendy-design-260nw-1927725176.png");    
+        background-position: center;
+        background-size: cover;
+        max-width: 2440px;
+        min-height: 380px; 
+        border-radius: 3px;
+    }
+
+    &__header {
+        display: flex;
+
+        &--first {
+            margin-top: 6rem;
+        }
+
+        &--seccond {
+            margin-bottom: 5rem;
+        }
+
+        p {
+            width: 33%;
+            padding-right: 66px;
+        }
+    }
+
+    &__h1 {
+        width: 33%;
+        text-align: inherit;
+        color: #000000;
+        font-size: 30px;
+    }
+
+    &__invisible {
+        width: 18.5%;
+    }
+
+    &__invisibleText {
+        width: 33%;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 2325px;
+        max-height: 1804px;
+    }
+
+    &__view {
+        display: flex;
+    }
+
+    &__filter {
+        min-width: 445px;
+        width: 445px;
+        height: 10px;
+        position: sticky;
+        top: 300px;
+    }
+
+    &__h2 {
+        margin-bottom: 15px;
+        color: #000000;
+        font-size: 30px;
+    }
+
+    &__checkbox {
+        margin-right: 5px;
+    }
+
+    &__card {
+        max-height: 1458px;
+    }
+
+    &__images{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__box {
+        position: relative;
+        height: 470px;
+        width: 360px;
+        overflow: hidden;
+        margin: 8px;
+    }
+
+    &__img{
+        height: 410px;
+        width: 100%;
+        border-radius: 7px;
+    }
+
+    &__display {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text {
+        font-weight: normal;
+    }
+
+    &__dropdown {
+        margin-bottom: 2rem;
+
+        select{
+            width: 330px;
+            background-color: #efefef;
+            border-radius: 0.3rem;
+            border: none;
+            height: 42px;
+        }
+    }
+
+    &__counter {
+      margin-left: 10px;  
+    }
+
+    &__filter-content {
+        margin-bottom: 2.5rem;
+    }
+}
+
+.btn-product {
+    background-color: #e74011;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0 5px 0 5px;
+    width: 92%;
+    position: absolute;
+    bottom: 72px;
+    left: 10px;
+}
+
+.scrollUpDown {
+    width: 100%;
+    height: 100%;
+}
+
+.scrollUpDown__btn {
+    i {
+        font-size: 22px;
+        vertical-align: middle;
+    }
+
+    &--visible {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e74011;
+        border-radius: 40px 40px 0 0;
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        bottom: 40px;
+        right: 50px;
+        text-align: center;
+        border-radius: 100px;
+        position: fixed;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    &--visible:hover {
+        background-color: #d64720;
+
+        .bx {
+            color: white;
+        }
+    }
+}
+
+.checkbox {
+    display: flex;
+    justify-content: space-between;
+    width: 20.4rem;
+}
