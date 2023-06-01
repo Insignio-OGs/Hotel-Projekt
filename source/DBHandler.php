@@ -314,4 +314,47 @@ class DBHandler
             return false;
         }
     }
+
+    /**
+     * Returns true if the room or car is available in the date range. Otherwise false
+     * @param $start_date - start date for checked time frame
+     * @param $end_date - end date for checked time frame
+     * @param $type - Car or Room
+     * @param $id - Car/Room ID
+    */
+    function isRoomOrCarAvailable($start_date, $end_date, $type, $id){
+        switch ($type) {
+            case "car":
+                $sql = 'SELECT * FROM getcars
+                RIGHT JOIN car_reservations cr on getcars.id = cr.car_id
+                WHERE (? < cr.date_start
+                OR   ? > cr.date_end)
+                AND cr.car_id = ?'; break;
+            case "room":
+                $sql = 'SELECT * FROM getrooms
+                RIGHT JOIN room_reservations rr on getrooms.id = rr.room_id
+                WHERE (? < rr.date_start
+                OR   ? > rr.date_end)
+                AND rr.room_id = ?'; break;
+        }
+        $stmt = $this->conn->prepare($sql);
+
+        try {
+            $stmt->bind_param('dds',$end_date,$start_date,$id);
+            $stmt->execute();
+            $res = $stmt->get_result();
+        } catch (Exception $e) {
+            return false;
+        }
+
+        if (!$res){
+            return false;
+        }
+        $row = $res->fetch_all();
+        if (count($row) > 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }
