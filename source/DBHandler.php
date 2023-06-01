@@ -270,9 +270,10 @@ class DBHandler
     /**
      * Returns all rooms of specified type as array
      * that are available in the given time frame
-     * @param $start_date - start date for checked time frame
-     * @param $end_date - end date for checked time frame
-     * @param $type - roomtype to get, empty for all rooms
+     * @param String $start_date - start date for checked time frame
+     * @param String $end_date - end date for checked time frame
+     * @param String $type - roomtype to get, empty for all rooms
+     * @return Bool true/false
     */
     function getAvailableRooms($start_date, $end_date, $type = 'all'){
 
@@ -317,12 +318,13 @@ class DBHandler
 
     /**
      * Returns true if the room or car is available in the date range. Otherwise false
-     * @param $start_date - start date for checked time frame
-     * @param $end_date - end date for checked time frame
-     * @param $type - Car or Room
-     * @param $id - Car/Room ID
+     * @param String $start_date - start date for checked time frame
+     * @param String $end_date - end date for checked time frame
+     * @param String $type - Car or Room
+     * @param String $id - Car/Room ID
+     * @return Bool true/false
     */
-    function isRoomOrCarAvailable($start_date, $end_date, $type, $id){
+    function isRoomOrCarAvailableOnTheGivenDateAndForTheGivenId($start_date, $end_date, $type, $id){
         switch ($type) {
             case "car":
                 $sql = 'SELECT * FROM getcars
@@ -356,5 +358,34 @@ class DBHandler
         } else {
             return true;
         }
+    }
+
+    /**
+     * Creates Reservation in db.
+     * @param String $start_date - start date for checked time frame
+     * @param String $end_date - end date for checked time frame
+     * @param String $type - car or room
+     * @param String $id - id from car/room
+     * @param String $addition - bool for insurance for car or all_inclusive for room
+     * @param String $user_id - ID from User
+     * @return Bool true/false
+     */
+    function createReservation($start_date, $end_date, $type, $id, $addition, $user_id) {
+        switch ($type) {
+            case 'car':
+                $sql = 'INSERT INTO car_reservations (id, user_id, car_id, date_start, date_end, insurance) VALUES ("", ?, ?, ?, ?, ?)'; break;
+            case 'room': 
+                $sql = 'INSERT INTO room_reservations (id, user_id, room_id, date_start, date_end, all_inclusive) VALUES ("", ?, ?, ?, ?, ?)'; break;
+        }
+
+        $stmt = $this->conn->prepare($sql);
+        try {
+            $stmt->bind_param('ssdds', $user_id, $id, $start_date, $end_date, $addition);
+            $stmt->execute();
+        } catch (Exception $e) {
+            return false;
+        }
+
+        return true;
     }
 }
