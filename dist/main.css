@@ -409,7 +409,7 @@ i {
   font-weight: bold;
 }
 .scrollUpDown__btn--visible:hover {
-  background-color: #d64720;
+  background-color: #636363;
 }
 .scrollUpDown__btn--visible:hover .bx {
   color: white;
@@ -618,7 +618,7 @@ body[data-theme=theme-purple] {
   margin-top: 2.3rem;
 }
 .changepw__btn:hover {
-  background: #ce4c28;
+  background: #636363;
 }
 .changepw__btn:active {
   top: 4px;
@@ -637,7 +637,7 @@ body[data-theme=theme-purple] {
   margin-top: 10px;
 }
 .changepw__links a:hover {
-  color: #ce4c28;
+  color: #636363;
 }
 .changepw__line {
   width: 1px;
@@ -751,7 +751,7 @@ body[data-theme=theme-purple] {
   margin-top: 2.3rem;
 }
 .forgotpw__btn:hover {
-  background: #ce4c28;
+  background: #636363;
 }
 .forgotpw__btn:active {
   top: 4px;
@@ -770,7 +770,7 @@ body[data-theme=theme-purple] {
   padding: 0 10px 0 10px;
 }
 .forgotpw__links a:hover {
-  color: #ce4c28;
+  color: #636363;
 }
 .forgotpw__line {
   width: 1px;
@@ -884,7 +884,7 @@ body[data-theme=theme-purple] {
   margin-top: 2.3rem;
 }
 .indexLogin__btn:hover {
-  background: #ce4c28;
+  background: #636363;
 }
 .indexLogin__btn:active {
   top: 4px;
@@ -903,7 +903,7 @@ body[data-theme=theme-purple] {
   margin-top: 10px;
 }
 .indexLogin__links a:hover {
-  color: #ce4c28;
+  color: #636363;
 }
 .indexLogin__line {
   width: 1px;
@@ -1014,7 +1014,7 @@ body[data-theme=theme-purple] {
   margin-top: 2.3rem;
 }
 .register__btn:hover {
-  background: #ce4c28;
+  background: #636363;
 }
 .register__btn:active {
   top: 4px;
@@ -1211,24 +1211,24 @@ td:nth-child(5) {
   transition: all 200ms ease-in;
 }
 .navigation__link:hover {
-  color: #ce4c28;
+  color: #636363;
 }
 .navigation__link:hover .anmelden {
   text-decoration: underline;
   text-underline-offset: 0.2em;
   text-decoration-thickness: 2.5px;
   transition: all 200ms ease-in;
-  color: #ce4c28;
+  color: #636363;
 }
 .navigation__link:hover .meinProfil {
   text-decoration: underline;
   text-underline-offset: 0.2em;
   text-decoration-thickness: 2.5px;
   transition: all 200ms ease-in;
-  color: #ce4c28;
+  color: #636363;
 }
 .navigation__link:hover .bx {
-  color: #ce4c28;
+  color: #636363;
   transition: all 200ms ease-in;
 }
 .navigation__link--btn-primary {
@@ -1388,7 +1388,7 @@ Sidebar Nav
   display: block;
 }
 .sidebar-nav ul li a:hover {
-  background-color: #e74011;
+  background-color: #636363;
 }
 .sidebar-nav ul li i {
   font-size: 1.8em;
