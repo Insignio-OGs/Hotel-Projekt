@@ -46,23 +46,9 @@
                     <img src="../images/carFour.jpg" alt="">
                 </div>
             </div>
-            <div class="zimmberbuchungInfo1">
-                <span>5.0</span>
-                <span>Sehr gut</span>
-                <span class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                </span>
-                <span class="share">
-                    <i class='bx bx-share-alt'></i>
-                </span>
-            </div>
             <div class="zimmberbuchungInfo2">
                 <h1>BMW irgendwas CX41</h1>
-                <h4>Waldauer Fußweg 3, 34123 Kassel•0561 574490</h4>
+                <h4>Vollfunktionsfähiges Auto mit Know-How Service</h4>
                 <h5>Beschreibung</h3>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
                     invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
@@ -84,10 +70,10 @@
             </div>
             <div class="zimmberbuchungInfo3">
                 <h5>Auto features</h3>
-                <li><i class="bx bx-wifi"><span>Wi-Fi</span></i></li>
-                <li><i class="bx bx-bed"><span>Bed</span></i></li>
-                <li><i class="bx bxs-baguette"><span>Breakfast</span></i></li>
-                <li><i class="bx bx-tv"><span>TV</span></i></li>
+                <li><i class='bx bxs-car-crash'><span>Spurhalteassistent</span></i></li>
+                <li><i class='bx bxs-credit-card'><span>Tankkarte</span></i></li>
+                <li><i class='bx bx-shield'><span>Vollkaskoversicherung </span></i></li>
+                <li><i class='bx bx-phone'><span>Service & Know-How</span></i></li>
             </div>
             <div class="booking-btn">
                 <button>Jetzt mieten</button>

@@ -9,34 +9,12 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <nav>
-        <ul class="nav-list">
-            <li class="nav-item">
-                <img src="../images/iconNav.png" alt="">
-            </li>
-            <li class="nav-item">
-                <a href="../index.php">Startseite</a>
-            </li>
-            <li class="nav-item">
-                <a href="fahrzeugbuchung.php">Fahrzeugbuchung</a>
-            </li>
-            <li class="nav-item">
-                <a href="zimmerbuchung.php">Zimmerbuchung</a>
-            </li>
-            <li class="nav-item">
-                <a href="kontaktseite.php">Kontaktseite</a>
-            </li>
-            <li class="nav-item">
-                <div class="login-container">
-                    <img class="loginLogo" src="../images/iconLogin.png" alt="">
-                    <a class="loginText" href="login/indexLogin.php"  name="submit">Login</a>
-                </div>
-            </li>
-        </ul>
-    </nav>
+    <?php
+        include("navigation.php");
+    ?>
     <header>
         <div class="header-container">
-            <img class="header-img" src="../images/headerImage.jpg" alt="">
+            <img class="header-img" src="../images/smartworks-coworking-E7Tzh2TTS6c-unsplash.jpg" alt="">
             <div class="header-content">
                 <h1 class="header-h1">Hotel Zimmerbuchung</h1>
             </div>
@@ -46,19 +24,37 @@
         <div class="section-one-container">
             <div class="section-one-container-background">
                 <div class="header-content-test">
-                    <select name="nights">
-                        <option value="nightOne">1 Nacht</option>
-                        <option value="nightTwo">2 Nächte</option>
-                        <option value="nightThree">3 Nächte</option>
-                        <option value="nightFour">4 Nächte</option>
-                    </select>
-                    <div class="calendar">
+                <div class="select">
+                        <select name="nights">
+                            <option value="nightOne">1 Nacht</option>
+                            <option value="nightTwo">2 Nächte</option>
+                            <option value="nightThree">3 Nächte</option>
+                            <option value="nightFour">4 Nächte</option>
+                        </select>
+                    </div>
+                    <div class="selectDate">
                         <input type="date" id="start" name="trip-start" value="2021-08-01" min="2021-08-01" max="2022-12-31">
-                        <input type="date" id="end" name="trip-end" value="2021-08-01" min="2021-08-01" max="2022-12-31">
                     </div>    
-                    <input type="text" placeholder="Zimmer">
-                    <input type="text" placeholder="Personen">
-                    <button class="btn-primary">Weiter</button>       
+                    <div class="selectDate">
+                        <input type="date" id="end" name="trip-end" value="2021-08-01" min="2021-08-01" max="2022-12-31">
+                    </div>
+                    <div class="select">
+                        <select name="Zimmer">
+                            <option value="ZimmerOne">1 Zimmer</option>
+                            <option value="ZimmerTwo">2 Zimmer</option>
+                            <option value="ZimmerThree">3 Zimmer</option>
+                            <option value="ZimmerFour">4 Zimmer</option>
+                        </select>
+                    </div>     
+                    <div class="select">
+                        <select name="Personen">
+                            <option value="PersonenOne">1 Person</option>
+                            <option value="PersonenTwo">2 Personen</option>
+                            <option value="PersonenThree">3 Personen</option>
+                            <option value="PersonenFour">4 Personen</option>
+                        </select>
+                    </div>    
+                    <button class="btn-primary">Jetzt buchen</button>       
                 </div>  
             </div> 
             <div class="room-product">
