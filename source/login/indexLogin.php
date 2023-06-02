@@ -44,6 +44,7 @@
                 $emailExists = $stmt->fetchAll();
                 if ($emailExists[0]['code'] === "") {
                     $_SESSION['SESSION_EMAIL'] = $email;
+                    $_SESSION['user_id'] = $emailExists[0]['id'];
                     header("Location: dashboard-site.php");
                 } else {
                     // Error message

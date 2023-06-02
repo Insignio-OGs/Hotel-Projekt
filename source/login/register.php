@@ -6,7 +6,7 @@
     use PHPMailer\PHPMailer\Exception;
 
     require 'connection.php'; 
-    include('../dbHandler.php');
+    //include('../dbHandler.php');
     require '../../vendor/autoload.php';
 
     $msg = "";
