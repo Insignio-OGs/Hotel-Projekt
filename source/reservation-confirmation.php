@@ -46,18 +46,18 @@
 
     if( isset($_GET['from_date']) && isset($_GET['until_date'])) {
         if(isset($_GET['room_id'])){
-            if($db->isRoomOrCarAvailable($_GET['from_date'],$_GET['until_date'],'room',$_GET['room_id'])){
-                $db->createReservation();
+            if($db->isRoomOrCarAvailableOnTheGivenDateAndForTheGivenId($_GET['from_date'],$_GET['until_date'],'room',$_GET['room_id'])){
+                $db->createReservation($_GET['from_date'], $_GET['until_date'], 'room', $_GET['room_id'], '1', $_SESSION['user_id']);
             }else{
-                echo('');
+                echo('du bekommst nichts');
             }
         }
 
         if(isset($_GET['car_id'])){
-            if($db->isRoomOrCarAvailable($_GET['from_date'],$_GET['until_date'],'car',$_GET['car_id'])){
-                $db->createReservation();
+            if($db->isRoomOrCarAvailableOnTheGivenDateAndForTheGivenId($_GET['from_date'],$_GET['until_date'],'car',$_GET['car_id'])){
+                $db->createReservation($_GET['from_date'], $_GET['until_date'], 'car', $_GET['car_id'], '1', $_SESSION['user_id']);
             }else{
-                echo('');
+                echo('du bekommst nichts');
             }
         }
     }
