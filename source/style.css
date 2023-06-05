@@ -917,6 +917,7 @@ header {
     width: 13.5rem;
     background-color: #dfdfdf;
     width: 18rem;
+    margin: 0.5rem;
 }
 
 .zimmer {
@@ -928,4 +929,108 @@ header {
 .naja {
     width: 71.5rem;
     margin: 1.5rem;
+}
+
+.tabelleTwo {
+    margin-top: 6rem;
+}
+
+table.boostrap4_table_head_dark_striped {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+table.boostrap4_table_head_dark_striped thead th {
+    font-size: 1rem;
+    line-height: 1.5;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    text-align: inherit;
+    padding: .75rem;
+    border-top: 1px solid #dee2e6;
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    color: #fff;
+    background-color: #212529;
+    border-color: #32383e;
+}
+
+table.boostrap4_table_head_dark_striped td {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+table.boostrap4_table_head_dark_striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, .05);
+}
+
+
+
+
+/* ----------- Non table related styles */
+
+.table_container {
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.buchungstabelle {
+  margin: 0 5rem;
+}
+
+.tabelleTwo {
+    margin: 0 5rem;
+    margin-top: 5rem;
+}
+
+.btn-dash-form {
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    background: #272626;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    width: 290px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 7px;
+}
+
+.btn-dash-form:hover {
+    background: #494949;
+}
+
+.app {
+    background-color: #e4e9f7;
+}
+
+.proDash {
+    margin-left: 2rem;
+    list-style: none;
+}
+
+.proDash ul {
+    list-style: none;
 }
