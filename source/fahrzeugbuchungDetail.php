@@ -18,7 +18,8 @@
             <?php
 
                 require_once('include.php');
-                $db = new DBHandler();
+                
+                $db = DBHandler::getInstance();
                 $car = $db->getCar($_GET['id']);
 
                 echo("

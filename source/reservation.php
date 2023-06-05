@@ -21,7 +21,7 @@
 
         require_once('include.php');
 
-        $db = new DBHandler();
+        $db = DBHandler::getInstance();
 
 
         if(isset($_GET['room_id'])){

@@ -28,7 +28,7 @@
 
                 require_once('include.php');
 
-                $db = new DBHandler();
+                $db = DBHandler::getInstance();
                 $res = $db->getCars();
 
                 foreach($res as $car){

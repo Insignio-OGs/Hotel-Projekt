@@ -5,9 +5,21 @@ require_once('UtilsClass.php');
 class DBHandler
 {
 
+    private static $instance = null;
+
     public $conn;
 
-    public function __construct() {
+    public static function getInstance()
+    {
+        if (self::$instance == null)
+        {
+            self::$instance = new DBHandler();
+        }
+
+        return self::$instance;
+    }
+
+    private function __construct() {
         $this->loadDBConn();
     }
 
@@ -388,22 +400,27 @@ class DBHandler
     function isRoomOrCarAvailableOnTheGivenDateAndForTheGivenId($start_date, $end_date, $type, $id){
         switch ($type) {
             case "car":
-                $sql = 'SELECT * FROM getcars
-                RIGHT JOIN car_reservations cr on getcars.id = cr.car_id
-                WHERE (? < cr.date_start
-                OR   ? > cr.date_end)
-                AND cr.car_id = ?'; break;
+                $sql = 'SELECT * FROM car_reservations
+                WHERE 
+                (
+                    (date_start >= ? AND date_start <= ?)
+                   OR (date_end >= ? AND date_end <= ?)
+                    OR (date_start < ? AND date_end > ?)
+                ) AND car_id = ?'; break;
+
             case "room":
-                $sql = 'SELECT * FROM getrooms
-                RIGHT JOIN room_reservations rr on getrooms.id = rr.room_id
-                WHERE (? < rr.date_start
-                OR   ? > rr.date_end)
-                AND rr.room_id = ?'; break;
+                $sql = 'SELECT * FROM room_reservations
+                WHERE 
+                (
+                    (date_start >= ? AND date_start <= ?)
+                   OR (date_end >= ? AND date_end <= ?)
+                    OR (date_start < ? AND date_end > ?)
+                ) AND room_id = ?'; break;
         }
         $stmt = $this->conn->prepare($sql);
 
         try {
-            $stmt->bind_param('dds',$end_date,$start_date,$id);
+            $stmt->bind_param('sssssss',$start_date,$end_date,$start_date,$end_date,$start_date,$end_date,$id);
             $stmt->execute();
             $res = $stmt->get_result();
         } catch (Exception $e) {
@@ -434,14 +451,14 @@ class DBHandler
     function createReservation($start_date, $end_date, $type, $id, $addition, $user_id) {
         switch ($type) {
             case 'car':
-                $sql = 'INSERT INTO car_reservations (id, user_id, car_id, date_start, date_end, insurance) VALUES ("", ?, ?, ?, ?, ?)'; break;
+                $sql = 'INSERT INTO car_reservations (user_id, car_id, date_start, date_end, insurance) VALUES (?, ?, ?, ?, ?)'; break;
             case 'room': 
-                $sql = 'INSERT INTO room_reservations (id, user_id, room_id, date_start, date_end, all_inclusive) VALUES ("", ?, ?, ?, ?, ?)'; break;
+                $sql = 'INSERT INTO room_reservations (user_id, room_id, date_start, date_end, all_inclusive) VALUES (?, ?, ?, ?, ?)'; break;
         }
 
         $stmt = $this->conn->prepare($sql);
         try {
-            $stmt->bind_param('ssdds', $user_id, $id, $start_date, $end_date, $addition);
+            $stmt->bind_param('ssssi', $user_id, $id, $start_date, $end_date, $addition);
             $stmt->execute();
         } catch (Exception $e) {
             return false;

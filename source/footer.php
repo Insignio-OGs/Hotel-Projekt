@@ -12,7 +12,7 @@
 
     </div>
 
-    <div class="footer-left">
+    <div class="footer-left" >
 
         <p class="footer-links">
 

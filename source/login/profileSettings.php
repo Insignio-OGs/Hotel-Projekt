@@ -3,7 +3,7 @@ if(!isset($_SESSION)){
     session_start();
 }
 require_once('../include.php');
-$db = new DBHandler();
+$db = DBHandler::getInstance();
 $userinfo = $db->getUserInfo($_SESSION['user_id']); 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $db->setUserInfo($_POST, $_SESSION['user_id']);

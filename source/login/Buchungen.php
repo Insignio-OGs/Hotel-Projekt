@@ -3,7 +3,7 @@
         session_start();
     }
     require_once('../include.php');
-    $db = new DBHandler();
+    $db = DBHandler::getInstance();
     $cars = $db->getCarReservations($_SESSION['user_id']); 
     $rooms = $db->getRoomReservations($_SESSION['user_id']); 
 ?>

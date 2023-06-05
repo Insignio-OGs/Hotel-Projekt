@@ -25,7 +25,7 @@
             <?php
             require_once('include.php');
 
-            $db = new DBHandler();
+            $db = DBHandler::getInstance();
             $rooms = $db->getRooms();
 
             foreach($rooms as $room) {

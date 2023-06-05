@@ -20,7 +20,7 @@
 
                 require_once('include.php');
                 
-                $db = new DBHandler();
+                $db = DBHandler::getInstance();
                 $room = $db->getRoom($_GET['id']);
 
                 echo("
