@@ -84,7 +84,7 @@
                 <li><i class='bx bx-tv'><span>Fernseher</span></i></li>
             </div>
             <div class='naja'>
-                <a href='reservation.php?room_id=".$room['id']."' class='btn-car-product'>Auto auswählen</a>
+                <a href='reservation.php?room_id=".$room['id']."' class='btn-car-product'>Zimmer buchen</a>
             </div>
             
             ");
