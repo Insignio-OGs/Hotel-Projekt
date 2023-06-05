@@ -58,17 +58,31 @@
                 </div>  
             </div>
             <div class="car-product-con">
-            <div class="car-product">
-                <div class="productcard-side-one-car">
-                    <img src="../images/carOne.jpg" alt="lol">
-                </div>
-                <div class="productcard-side-two-car">
-                    <h3 class="h3Car">Mietwagen</h3>
-                    <div class="productcard-side-two-content-car">
-                        <div class="side-one-car">
+
+            <?php
+
+                require_once('include.php');
+
+                $db = new DBHandler();
+                $res = $db->getCars();
+
+                foreach($res as $car){
+                    echo ("
+                    <div class='car-product'>
+                    <div class='productcard-side-one-car'>
+                    <img src='../images/".$car['pic_id']."01.png' alt='lol'>
+                    </div>
+                    <div class='productcard-side-two-car'>
+                    <h3 class='h3Car'>".$car['Modell']."</h3>
+                    <div class='productcard-side-two-content-car'>
+                        <div class='side-one-car'>
                             <span>
                                 <i class='bx bxs-car'></i>
                                 <p>Preis:</p>
+                            </span>
+                            <span>
+                                <i class='bx bxs-car'></i>
+                                <p>Dauer:</p>
                             </span>
                             <span>
                                 <i class='bx bxs-car'></i>
@@ -78,537 +92,33 @@
                                 <i class='bx bxs-car'></i>
                                 <p>Typ:</p>
                             </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Dauer:</p>
-                            </span>
                         </div>
-                        <div class="side-two-car">
+                        <div class='side-two-car'>
                             <span>
-                                <p>230€ pro Monat</p>
+                                <p> ".$car['Bruttopreis']." €</p>
                             </span>
                             <span>
-                                <p>Tesla</p>
+                                <p> Pro Tag </p>
                             </span>
                             <span>
-                                <p>Sport</p>
+                                <p>".$car['Marke']."</p>
                             </span>
                             <span>
-                                <p>2 Wochen</p>
+                                <p>".$car['Fahrzeugtyp']."</p>
                             </span>
                         </div>
                     </div>
-                    <div class="button">
-                        <a href="fahrzeugbuchungDetail.php" class="btn-car-product">Auto auswählen</a>
-                        <!-- <button class="btn-car-product">Auto mieten</button> -->
+                    <div class='button'>
+                        <a href='fahrzeugbuchungDetail.php?id=".$car['ID']."' class='btn-car-product'>Auto auswählen</a>
+                        <!-- <button class='btn-car-product'>Auto mieten</button> -->
                     </div>
                 </div>
-            </div>
-            <div class="car-product">
-                <div class="productcard-side-one-car">
-                    <img src="../images/carTwo.jpg" alt="lol">
                 </div>
-                <div class="productcard-side-two-car">
-                    <h3 class="h3Car">Mietwagen</h3>
-                    <div class="productcard-side-two-content-car">
-                        <div class="side-one-car">
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Preis:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Marke:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Typ:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Dauer:</p>
-                            </span>
-                        </div>
-                        <div class="side-two-car">
-                            <span>
-                                <p>230€ pro Monat</p>
-                            </span>
-                            <span>
-                                <p>Tesla</p>
-                            </span>
-                            <span>
-                                <p>Sport</p>
-                            </span>
-                            <span>
-                                <p>2 Wochen</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a href="fahrzeugbuchungDetail.php" class="btn-car-product">Auto auswählen</a>
-                        <!-- <button class="btn-car-product">Auto mieten</button> -->
-                    </div>
-                </div>
-            </div>
-            <div class="car-product">
-                <div class="productcard-side-one-car">
-                    <img src="../images/carThree.jpg" alt="lol">
-                </div>
-                <div class="productcard-side-two-car">
-                    <h3 class="h3Car">Mietwagen</h3>
-                    <div class="productcard-side-two-content-car">
-                        <div class="side-one-car">
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Preis:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Marke:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Typ:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Dauer:</p>
-                            </span>
-                        </div>
-                        <div class="side-two-car">
-                            <span>
-                                <p>230€ pro Monat</p>
-                            </span>
-                            <span>
-                                <p>Tesla</p>
-                            </span>
-                            <span>
-                                <p>Sport</p>
-                            </span>
-                            <span>
-                                <p>2 Wochen</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a href="fahrzeugbuchungDetail.php" class="btn-car-product">Auto auswählen</a>
-                        <!-- <button class="btn-car-product">Auto mieten</button> -->
-                    </div>
-                </div>
-            </div>
-            <div class="car-product">
-                <div class="productcard-side-one-car">
-                    <img src="../images/carFour.jpg" alt="lol">
-                </div>
-                <div class="productcard-side-two-car">
-                    <h3 class="h3Car">Mietwagen</h3>
-                    <div class="productcard-side-two-content-car">
-                        <div class="side-one-car">
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Preis:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Marke:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Typ:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Dauer:</p>
-                            </span>
-                        </div>
-                        <div class="side-two-car">
-                            <span>
-                                <p>230€ pro Monat</p>
-                            </span>
-                            <span>
-                                <p>Tesla</p>
-                            </span>
-                            <span>
-                                <p>Sport</p>
-                            </span>
-                            <span>
-                                <p>2 Wochen</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a href="fahrzeugbuchungDetail.php" class="btn-car-product">Auto auswählen</a>
-                        <!-- <button class="btn-car-product">Auto mieten</button> -->
-                    </div>
-                </div>
-            </div>
-            <div class="car-product">
-                <div class="productcard-side-one-car">
-                    <img src="../images/carFive.jpg" alt="lol">
-                </div>
-                <div class="productcard-side-two-car">
-                    <h3 class="h3Car">Mietwagen</h3>
-                    <div class="productcard-side-two-content-car">
-                        <div class="side-one-car">
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Preis:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Marke:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Typ:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Dauer:</p>
-                            </span>
-                        </div>
-                        <div class="side-two-car">
-                            <span>
-                                <p>230€ pro Monat</p>
-                            </span>
-                            <span>
-                                <p>Tesla</p>
-                            </span>
-                            <span>
-                                <p>Sport</p>
-                            </span>
-                            <span>
-                                <p>2 Wochen</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a href="fahrzeugbuchungDetail.php" class="btn-car-product">Auto auswählen</a>
-                        <!-- <button class="btn-car-product">Auto mieten</button> -->
-                    </div>
-                </div>
-            </div>
-            <div class="car-product">
-                <div class="productcard-side-one-car">
-                    <img src="../images/carOne.jpg" alt="lol">
-                </div>
-                <div class="productcard-side-two-car">
-                    <h3 class="h3Car">Mietwagen</h3>
-                    <div class="productcard-side-two-content-car">
-                        <div class="side-one-car">
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Preis:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Marke:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Typ:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Dauer:</p>
-                            </span>
-                        </div>
-                        <div class="side-two-car">
-                            <span>
-                                <p>230€ pro Monat</p>
-                            </span>
-                            <span>
-                                <p>Tesla</p>
-                            </span>
-                            <span>
-                                <p>Sport</p>
-                            </span>
-                            <span>
-                                <p>2 Wochen</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a href="fahrzeugbuchungDetail.php" class="btn-car-product">Auto auswählen</a>
-                        <!-- <button class="btn-car-product">Auto mieten</button> -->
-                    </div>
-                </div>
-            </div>
-            <div class="car-product">
-                <div class="productcard-side-one-car">
-                    <img src="../images/carTwo.jpg" alt="lol">
-                </div>
-                <div class="productcard-side-two-car">
-                    <h3 class="h3Car">Mietwagen</h3>
-                    <div class="productcard-side-two-content-car">
-                        <div class="side-one-car">
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Preis:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Marke:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Typ:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Dauer:</p>
-                            </span>
-                        </div>
-                        <div class="side-two-car">
-                            <span>
-                                <p>230€ pro Monat</p>
-                            </span>
-                            <span>
-                                <p>Tesla</p>
-                            </span>
-                            <span>
-                                <p>Sport</p>
-                            </span>
-                            <span>
-                                <p>2 Wochen</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a href="fahrzeugbuchungDetail.php" class="btn-car-product">Auto auswählen</a>
-                        <!-- <button class="btn-car-product">Auto mieten</button> -->
-                    </div>
-                </div>
-            </div>
-            <div class="car-product">
-                <div class="productcard-side-one-car">
-                    <img src="../images/carThree.jpg" alt="lol">
-                </div>
-                <div class="productcard-side-two-car">
-                    <h3 class="h3Car">Mietwagen</h3>
-                    <div class="productcard-side-two-content-car">
-                        <div class="side-one-car">
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Preis:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Marke:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Typ:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Dauer:</p>
-                            </span>
-                        </div>
-                        <div class="side-two-car">
-                            <span>
-                                <p>230€ pro Monat</p>
-                            </span>
-                            <span>
-                                <p>Tesla</p>
-                            </span>
-                            <span>
-                                <p>Sport</p>
-                            </span>
-                            <span>
-                                <p>2 Wochen</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a href="fahrzeugbuchungDetail.php" class="btn-car-product">Auto auswählen</a>
-                        <!-- <button class="btn-car-product">Auto mieten</button> -->
-                    </div>
-                </div>
-            </div>
-            <div class="car-product">
-                <div class="productcard-side-one-car">
-                    <img src="../images/carFour.jpg" alt="lol">
-                </div>
-                <div class="productcard-side-two-car">
-                    <h3 class="h3Car">Mietwagen</h3>
-                    <div class="productcard-side-two-content-car">
-                        <div class="side-one-car">
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Preis:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Marke:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Typ:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Dauer:</p>
-                            </span>
-                        </div>
-                        <div class="side-two-car">
-                            <span>
-                                <p>230€ pro Monat</p>
-                            </span>
-                            <span>
-                                <p>Tesla</p>
-                            </span>
-                            <span>
-                                <p>Sport</p>
-                            </span>
-                            <span>
-                                <p>2 Wochen</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a href="fahrzeugbuchungDetail.php" class="btn-car-product">Auto auswählen</a>
-                        <!-- <button class="btn-car-product">Auto mieten</button> -->
-                    </div>
-                </div>
-            </div>
-            <div class="car-product">
-                <div class="productcard-side-one-car">
-                    <img src="../images/carFive.jpg" alt="lol">
-                </div>
-                <div class="productcard-side-two-car">
-                    <h3 class="h3Car">Mietwagen</h3>
-                    <div class="productcard-side-two-content-car">
-                        <div class="side-one-car">
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Preis:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Marke:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Typ:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Dauer:</p>
-                            </span>
-                        </div>
-                        <div class="side-two-car">
-                            <span>
-                                <p>230€ pro Monat</p>
-                            </span>
-                            <span>
-                                <p>Tesla</p>
-                            </span>
-                            <span>
-                                <p>Sport</p>
-                            </span>
-                            <span>
-                                <p>2 Wochen</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a href="fahrzeugbuchungDetail.php" class="btn-car-product">Auto auswählen</a>
-                        <!-- <button class="btn-car-product">Auto mieten</button> -->
-                    </div>
-                </div>
-            </div>
-            <div class="car-product">
-                <div class="productcard-side-one-car">
-                    <img src="../images/carOne.jpg" alt="lol">
-                </div>
-                <div class="productcard-side-two-car">
-                    <h3 class="h3Car">Mietwagen</h3>
-                    <div class="productcard-side-two-content-car">
-                        <div class="side-one-car">
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Preis:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Marke:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Typ:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Dauer:</p>
-                            </span>
-                        </div>
-                        <div class="side-two-car">
-                            <span>
-                                <p>230€ pro Monat</p>
-                            </span>
-                            <span>
-                                <p>Tesla</p>
-                            </span>
-                            <span>
-                                <p>Sport</p>
-                            </span>
-                            <span>
-                                <p>2 Wochen</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a href="fahrzeugbuchungDetail.php" class="btn-car-product">Auto auswählen</a>
-                        <!-- <button class="btn-car-product">Auto mieten</button> -->
-                    </div>
-                </div>
-            </div>
-            <div class="car-product">
-                <div class="productcard-side-one-car">
-                    <img src="../images/carTwo.jpg" alt="lol">
-                </div>
-                <div class="productcard-side-two-car">
-                    <h3 class="h3Car">Mietwagen</h3>
-                    <div class="productcard-side-two-content-car">
-                        <div class="side-one-car">
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Preis:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Marke:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Typ:</p>
-                            </span>
-                            <span>
-                                <i class='bx bxs-car'></i>
-                                <p>Dauer:</p>
-                            </span>
-                        </div>
-                        <div class="side-two-car">
-                            <span>
-                                <p>230€ pro Monat</p>
-                            </span>
-                            <span>
-                                <p>Tesla</p>
-                            </span>
-                            <span>
-                                <p>Sport</p>
-                            </span>
-                            <span>
-                                <p>2 Wochen</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a href="fahrzeugbuchungDetail.php" class="btn-car-product">Auto auswählen</a>
-                        <!-- <button class="btn-car-product">Auto mieten</button> -->
-                    </div>
-                </div>
+                ");
+                }
+
+            ?>
+
             </div>
             </div> 
         </div>
