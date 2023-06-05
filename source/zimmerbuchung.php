@@ -21,210 +21,78 @@
         </div>
     </header>
     <section>
-        <div class="section-one-container">
-            <div class="section-one-container-background">
-                <?php include_once('search.php') ?>
-            </div> 
-            <div class="room-product">
-                <div class="productcard-side-one">
-                    <img src="../images/einzelzimmer.jpg" alt="lol">
+
+            <?php
+            require_once('include.php');
+
+            $db = new DBHandler();
+            $rooms = $db->getRooms();
+
+            foreach($rooms as $room) {
+                echo("
+                <div class='room-product'>
+                <div class='productcard-side-one'>
+                    <img src='../images/".$room['type']."1.png' alt='lol'>
                 </div>
-                <div class="productcard-side-two">
-                    <h3>Einzelzimmer</h3>
-                    <div class="productcard-side-two-content">
-                        <div class="side-one">
+                <div class='productcard-side-two'>
+                    <h3>Nr. 10".$room['id']." - ".$room['type']."</h3>
+                    <div class='productcard-side-two-content'>
+                        <div class='side-one'>
                             <span>
-                                <i class="bx bx-search"></i>
-                                <p>Preis: 100€ pro Tag</p>
+                            <i class='bx bx-info-circle' ></i>
+                                <p>Preis: ".$room['price_brutto']."€ pro Tag</p>
                             </span>
                             <span>
-                                <i class="bx bx-search"></i>
-                                <p>Größe: 20m²</p>
+                            <i class='bx bx-info-circle' ></i>
+                                <p>Größe: ".$room['size']."m²</p>
                             </span>
                             <span>
-                                <i class="bx bx-search"></i>
+                            <i class='bx bx-info-circle' ></i>
+                                <p>Anzahl Schlafplätze: ".($room['beds_single']+($room['beds_double']*2))."</p>
+                            </span>
+                            <span>
+                            <i class='bx bx-info-circle' ></i>
+                                <p>Anzahl Schlafplätze: ".($room['beds_single']+($room['beds_double']*2))."</p>
+                            </span>
+                            <span>
+                                <i class='bx bx-info-circle' ></i>
+                                <p>Kinderbetten: ".$room['beds_child']."</p>
+                            </span>
+                        </div>
+                        <div class='side-two'>
+                            <span>
+                                <i class='bx bx-check'></i>
+                                <p>Inklusive Frühstück</p>
+                            </span>
+                            <span>
+                                <i class='bx bx-check'></i>
                                 <p>Gratis WLAN</p>
                             </span>
                             <span>
-                                <i class="bx bx-search"></i>
-                                <p>Gratis Parkplatz</p>
-                            </span>
-                        </div>
-                        <div class="side-two">
-                            <span>
-                                <i class="bx bx-search"></i>
-                                <p>Kühlschrank</p>
-                            </span>
-                            <span>
-                                <i class="bx bx-search"></i>
+                                <i class='bx bx-check'></i>
                                 <p>Kaffemaschine</p>
                             </span>
                             <span>
-                                <i class="bx bx-search"></i>
-                                <p>Klimaanlage</p>
+                                <i class='bx bx-check'></i>
+                                <p>Gratis Parkplatz</p>
                             </span>
                             <span>
-                                <i class="bx bx-search"></i>
+                                <i class='bx bx-check'></i>
                                 <p>Balkon</p>
                             </span>
                         </div>
                     </div>
-                    <div class="button">
-                        <a href="zimmerbuchungDetail.php" class="btn-room-product">Zimmer auswählen</a>
-                        <!-- <button class="btn-room-product">Zimmer auswählen</button> -->
+                    <div class='button'>
+                        <a href='zimmerbuchungDetail.php?id=".$room['id']."' class='btn-room-product'>Zimmer auswählen</a>
+                        <!-- <button class='btn-room-product'>Zimmer auswählen</button> -->
                     </div>
                 </div>
-            </div>
-            <div class="room-product">
-                <div class="productcard-side-one">
-                    <img src="../images/doppelzimmer standard.jpg" alt="lol">
                 </div>
-                <div class="productcard-side-two">
-                    <h3>Doppelzimmer Standard</h3>
-                    <div class="productcard-side-two-content">
-                        <div class="side-one">
-                            <span>
-                                <i class="bx bx-search"></i>
-                                <p>Preis: 100€ pro Tag</p>
-                            </span>
-                            <span>
-                                <i class="bx bx-search"></i>
-                                <p>Größe: 20m²</p>
-                            </span>
-                            <span>
-                                <i class="bx bx-search"></i>
-                                <p>Gratis WLAN</p>
-                            </span>
-                            <span>
-                                <i class="bx bx-search"></i>
-                                <p>Gratis Parkplatz</p>
-                            </span>
-                        </div>
-                        <div class="side-two">
-                        <span>
-                            <i class="bx bx-search"></i>
-                            <p>Kühlschrank</p>
-                        </span>
-                        <span>
-                            <i class="bx bx-search"></i>
-                            <p>Kaffemaschine</p>
-                        </span>
-                        <span>
-                            <i class="bx bx-search"></i>
-                            <p>Klimaanlage</p>
-                        </span>
-                        <span>
-                            <i class="bx bx-search"></i>
-                            <p>Balkon</p>
-                        </span>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a href="zimmerbuchungDetail.php" class="btn-room-product">Zimmer auswählen</a>
-                        <!-- <button class="btn-room-product">Zimmer auswählen</button> -->
-                    </div>
-                </div>
-            </div>
-            <div class="room-product">
-                <div class="productcard-side-one">
-                    <img src="../images/doppelzimmer komfort.jpg" alt="lol">
-                </div>
-                <div class="productcard-side-two">
-                    <h3>Doppelzimmer Komfort</h3>
-                    <div class="productcard-side-two-content">
-                        <div class="side-one">
-                            <span>
-                                <i class="bx bx-search"></i>
-                                <p>Preis: 100€ pro Tag</p>
-                            </span>
-                            <span>
-                                <i class="bx bx-search"></i>
-                                <p>Größe: 20m²</p>
-                            </span>
-                            <span>
-                                <i class="bx bx-search"></i>
-                                <p>Gratis WLAN</p>
-                            </span>
-                            <span>
-                                <i class="bx bx-search"></i>
-                                <p>Gratis Parkplatz</p>
-                            </span>
-                        </div>
-                        <div class="side-two">
-                        <span>
-                            <i class="bx bx-search"></i>
-                            <p>Kühlschrank</p>
-                        </span>
-                        <span>
-                            <i class="bx bx-search"></i>
-                            <p>Kaffemaschine</p>
-                        </span>
-                        <span>
-                            <i class="bx bx-search"></i>
-                            <p>Klimaanlage</p>
-                        </span>
-                        <span>
-                            <i class="bx bx-search"></i>
-                            <p>Balkon</p>
-                        </span>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a href="zimmerbuchungDetail.php" class="btn-room-product">Zimmer auswählen</a>
-                        <!-- <button class="btn-room-product">Zimmer auswählen</button> -->
-                    </div>
-                </div>
-            </div>
-            <div class="room-product">
-                <div class="productcard-side-one">
-                    <img src="../images/familienzimmer.jpg" alt="lol">
-                </div>
-                <div class="productcard-side-two">
-                    <h3>Familienzimmer</h3>
-                    <div class="productcard-side-two-content">
-                        <div class="side-one">
-                            <span>
-                                <i class="bx bx-search"></i>
-                                <p>Preis: 100€ pro Tag</p>
-                            </span>
-                            <span>
-                                <i class="bx bx-search"></i>
-                                <p>Größe: 20m²</p>
-                            </span>
-                            <span>
-                                <i class="bx bx-search"></i>
-                                <p>Gratis WLAN</p>
-                            </span>
-                            <span>
-                                <i class="bx bx-search"></i>
-                                <p>Gratis Parkplatz</p>
-                            </span>
-                        </div>
-                        <div class="side-two">
-                        <span>
-                            <i class="bx bx-search"></i>
-                            <p>Kühlschrank</p>
-                        </span>
-                        <span>
-                            <i class="bx bx-search"></i>
-                            <p>Kaffemaschine</p>
-                        </span>
-                        <span>
-                            <i class="bx bx-search"></i>
-                            <p>Klimaanlage</p>
-                        </span>
-                        <span>
-                            <i class="bx bx-search"></i>
-                            <p>Balkon</p>
-                        </span>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a href="zimmerbuchungDetail.php" class="btn-room-product">Zimmer auswählen</a>
-                        <!-- <button class="btn-room-product">Zimmer auswählen</button> -->
-                    </div>
-                </div>
-            </div>
+                "); 
+            }
+
+            ?>
+
         </div>
     </section>
     <?php

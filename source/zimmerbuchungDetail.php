@@ -15,30 +15,40 @@
     <section>
         <div class="zimmerbuchungDetail">
             <div class="zimmberbuchungImgGallery">
-                <div class="zimmberbuchungContent1">
-                    <img src="../images/doppelzimmer standard.jpg" alt="">
+                
+                <?php
+
+                require_once('include.php');
+                
+                $db = new DBHandler();
+                $room = $db->getRoom($_GET['id']);
+
+                echo("
+                
+                <div class='zimmberbuchungContent1'>
+                    <img src='../images/".$room['type']."1.png' alt=''>
                 </div>
-                <div class="zimmberbuchungContent2">
-                    <img src="../images/doppelzimmer komfort.jpg" alt="">
-                    <img src="../images/einzelzimmer.jpg" alt="">
-                    <img src="../images/familienzimmer.jpg" alt="">
+                <div class='zimmberbuchungContent2'>
+                    <img src='../images/".$room['type']."2.png' alt=''>
+                    <img src='../images/".$room['type']."3.png' alt=''>
+                    <img src='../images/".$room['type']."4.png' alt=''>
                 </div>
             </div>
-            <div class="zimmberbuchungInfo1">
+            <div class='zimmberbuchungInfo1'>
                 <span>5.0</span>
                 <span>Sehr gut</span>
-                <span class="stars">
+                <span class='stars'>
                     <i class='bx bxs-star'></i>
                     <i class='bx bxs-star'></i>
                     <i class='bx bxs-star'></i>
                     <i class='bx bxs-star'></i>
                     <i class='bx bxs-star'></i>
                 </span>
-                <span class="share">
+                <span class='share'>
                     <i class='bx bx-share-alt'></i>
                 </span>
             </div>
-            <div class="zimmberbuchungInfo2">
+            <div class='zimmberbuchungInfo2'>
                 <h1>B&B Hotel Kassel-City</h1>
                 <h4>Waldauer Fußweg 3, 34123 Kassel•0561 574490</h4>
                 <h5>Beschreibung</h3>
@@ -58,18 +68,28 @@
                     tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
                     At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
                     gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                </p>
+                </p><br><br>
+                <h5>Betten:</h3>
+                <p>Einzelbetten: ".$room['beds_single']."</p>
+                <p>Doppelbetten: ".$room['beds_double']."</p>
+                <p>Kinderbetten: ".$room['beds_child']."</p><br><br>
+                <h5>Größe</h3>
+                <p>".$room['size']."m²</p>
             </div>
-            <div class="zimmberbuchungInfo3">
+            <div class='zimmberbuchungInfo3'>
                 <h5>Hotel features</h3>
-                <li><i class="bx bx-wifi"><span>Wi-Fi</span></i></li>
-                <li><i class="bx bx-bed"><span>Bed</span></i></li>
-                <li><i class="bx bxs-baguette"><span>Breakfast</span></i></li>
-                <li><i class="bx bx-tv"><span>TV</span></i></li>
+                <li><i class='bx bx-wifi'><span>Wi-Fi</span></i></li>
+                <li><i class='bx bx-bed'><span>Große Betten</span></i></li>
+                <li><i class='bx bxs-baguette'><span>Frühstück inklusive</span></i></li>
+                <li><i class='bx bx-tv'><span>Fernseher</span></i></li>
             </div>
-            <div class="booking-btn">
-                <a class="reservation" href="reservation.php">Jetzt buchen</a>
-            </div>
+
+            <a href='reservation.php?room_id=".$room['id']."' class='btn-car-product'>Auto auswählen</a>
+            
+            ");
+
+            ?>
+
         </div>
     </section>
     <?php

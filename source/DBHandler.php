@@ -267,13 +267,44 @@ class DBHandler
         return $return;
     }
 
-        /**
+     /**
      * Returns one Car as array
      * @return array|false
      */
     function getCar($id) {
 
         $sql = 'SELECT * FROM getcars WHERE ID = '.$id.';';
+
+        try {
+            $res = $this->conn->query($sql);
+        } catch (Exception $e) {
+            return false;
+        }
+
+        if (!$res){
+            return false;
+        }
+
+        $array = array();
+        while ($row = $res->fetch_assoc()) {
+            $array[] = $row;
+        }
+
+        if (count($array) > 0) {
+            return $array[0];
+        } else {
+            return false;
+        }
+    }
+
+
+     /**
+     * Returns one Car as array
+     * @return array|false
+     */
+    function getRoom($id) {
+
+        $sql = 'SELECT * FROM getRooms WHERE ID = '.$id.';';
 
         try {
             $res = $this->conn->query($sql);
