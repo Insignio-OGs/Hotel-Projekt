@@ -45,6 +45,7 @@
                 if ($emailExists[0]['code'] === "") {
                     $_SESSION['SESSION_EMAIL'] = $email;
                     $_SESSION['user_id'] = $emailExists[0]['id'];
+                    $_SESSION['user_type'] = $emailExists[0]['type'];
                     header("Location: dashboard-site.php");
                 } else {
                     // Error message
