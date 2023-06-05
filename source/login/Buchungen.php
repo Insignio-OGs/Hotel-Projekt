@@ -19,10 +19,7 @@
                     <a href="profileSettings.php"><i class="bx bx-user-circle"></i> <span>Profileinstellungen</span></a>
                     <ul class="nav-flyout">
                         <li>
-                        <a href="aktiveBuchungen.php"><i class="bx bx-home-alt icon"></i>Aktive Buchungen</a>
-                        </li>
-                        <li>
-                        <a href="inaktiveBuchungen.php"><i class="bx bxs-bar-chart-alt-2"></i>Inaktive Buchungen</a>
+                        <a href="Buchungen.php"><i class="bx bxs-bar-chart-alt-2"></i>Inaktive Buchungen</a>
                         </li>
                         <li>
                         <a href='../../index.php'><i class="bx bx-home-alt icon"></i>Home</a>
