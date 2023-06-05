@@ -126,15 +126,7 @@ a {
 }
 
 // ##### Close Button #####
-.btn-close {
-    background-color: transparent;
-    border: 0;
-    font-size: 35px;
-    cursor: pointer;
-    position: absolute;
-    right: 847px;
-    top: 299px;
-}
+
 
 .btn-close-reg {
     background-color: transparent;
@@ -142,8 +134,18 @@ a {
     font-size: 35px;
     cursor: pointer;
     position: absolute;
-    right: 847px;
-    top: 280px;
+    right: 527px;
+    top: 124px;
+}
+
+.btn-close {
+    background-color: transparent;
+    border: 0;
+    font-size: 35px;
+    cursor: pointer;
+    position: absolute;
+    right: 527px;
+    top: 139px;
 }
 
 .tbox {

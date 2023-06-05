@@ -49,37 +49,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <form method="POST" action="profileSettings.php">
   <ul>
     <li>
-      <label for="username">Benutzername:</label>
-      <input type="text" id="username" name="username" value="<?php echo $userinfo[0][1]; ?>">
+      <input placeholder="Benutzername" class="proInt" type="text" id="username" name="username" value="<?php echo $userinfo[0][1]; ?>">
 
     </li>
     <li>
-      <label for="first_name">Vorname:</label>
-      <input type="text" id="first_name" name="first_name" value="<?php echo $userinfo[0][4]; ?>">
+      <input placeholder="Vorname" type="text" id="first_name" name="first_name" value="<?php echo $userinfo[0][4]; ?>">
 
     </li>
     <li>
-      <label for="last_name">Nachname:</label>
-      <input type="text" id="last_name" name="last_name" value="<?php echo $userinfo[0][5]; ?>">
+      <input placeholder="Nachname" type="text" id="last_name" name="last_name" value="<?php echo $userinfo[0][5]; ?>">
 
     </li>
     <li>
-      <label for="email">E-Mail:</label>
-      <input type="text" id="email" name="email" value="<?php echo $userinfo[0][6]; ?>">
+      <input placeholder="E-Mail" type="text" id="email" name="email" value="<?php echo $userinfo[0][6]; ?>">
 
     </li>
     <li>
-      <label for="password">Passwort:</label>
-      <input type="password" id="password" name="password">
+      <input placeholder="Passwort" type="password" id="password" name="password">
     </li>
     <li>
-      <label for="password">Passwort erneut eingeben</label>
-      <input type="password" id="passwordcheck" name="passwordcheck">
+      <input placeholder="Passwort erneut eingeben" type="password" id="passwordcheck" name="passwordcheck">
     </li>
     <li>
-      <label for="password">Neues Passwort</label>
-      <input type="password" id="passwordnew" name="passwordnew">
-      <button type="submit" name="Speichern" value="Speichern">Speichern</button>
+      <input placeholder="Neues Passwort" type="password" id="passwordnew" name="passwordnew">
+      <br><button type="submit" name="Speichern" value="Speichern">Speichern</button>
     </li>
   </ul>
 </form>
