@@ -23,9 +23,6 @@
             <a href="/projects/Hotel-Projekt/source/kontaktseite.php">Kontaktseite</a>
         </li>
         <li class="nav-item">
-             <a href="/projects/Hotel-Projekt/source/impressum.php">Impressum</a>
-        </li>
-        <li class="nav-item">
             <div class="login-container">
                 <?php 
                     if (isset($_SESSION['SESSION_EMAIL'])) {
