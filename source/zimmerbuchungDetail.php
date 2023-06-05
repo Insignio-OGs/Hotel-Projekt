@@ -83,8 +83,9 @@
                 <li><i class='bx bxs-baguette'><span>Frühstück inklusive</span></i></li>
                 <li><i class='bx bx-tv'><span>Fernseher</span></i></li>
             </div>
-
-            <a href='reservation.php?room_id=".$room['id']."' class='btn-car-product'>Auto auswählen</a>
+            <div class='naja'>
+                <a href='reservation.php?room_id=".$room['id']."' class='btn-car-product'>Auto auswählen</a>
+            </div>
             
             ");
 
