@@ -5,6 +5,7 @@ haben wir mal eine Prozent gestiegen von Händlern zufolge auch noch in Deutschl
 gemeinsamen Gottesdienst übernimmt die USA 
 
 unter Druck geraten ist der Stadt 
+![money_boy_pr_denis_ignatov_800_2014](https://github.com/Insignio-OGs/Hotel-Projekt/assets/61423272/e49fad49-d12e-4d9f-b469-d5bb81f26b3f)
 
 persönliche Entscheidung durch Tanzen 
 recht groß Logo zurück buchen lassen können keine Einigung zwischen Israel operieren und der Deutschen am Montag 
