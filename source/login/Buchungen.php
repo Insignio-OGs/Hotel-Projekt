@@ -1,9 +1,11 @@
-
 <?php 
+    if(!isset($_SESSION)){ 
+        session_start();
+    }
     require_once('../include.php');
     $db = new DBHandler();
-    $cars = $db->getCarReservations(); 
-    $rooms = $db->getRoomReservations(); 
+    $cars = $db->getCarReservations($_SESSION['user_id']); 
+    $rooms = $db->getRoomReservations($_SESSION['user_id']); 
 ?>
 
 <html lang="de">
