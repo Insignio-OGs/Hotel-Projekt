@@ -2,7 +2,7 @@
 
 class UtilsClass {
 
-    public $configPath = 'C:\xampp\htdocs\Hotel-Projekt\config.json';
+    public $configPath = 'C:\xampp\htdocs\projects\Hotel-Projekt\config.json';
 
     /**
      * returns the value for the passed config parameter
