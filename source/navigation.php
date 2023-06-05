@@ -11,16 +11,16 @@
             <img class="navigation__img" src="<?php echo ($pageTitle == "index.php") ? "images/iconNav.png" : "../images/iconNav.png"?>" alt="">
         </li>
         <li class="nav-item">
-            <a href="index.php">Startseite</a>
+            <a href="/projects/Hotel-Projekt/index.php">Startseite</a>
         </li>
         <li class="nav-item">
-            <a href="source/fahrzeugbuchung.php">Fahrzeugbuchung</a>
+            <a href="/projects/Hotel-Projekt/source/fahrzeugbuchung.php">Fahrzeugbuchung</a>
         </li>
         <li class="nav-item">
-            <a href="source/zimmerbuchung.php">Zimmerbuchung</a>
+            <a href="/projects/Hotel-Projekt/source/zimmerbuchung.php">Zimmerbuchung</a>
         </li>
         <li class="nav-item">
-            <a href="source/kontaktseite.php">Kontaktseite</a>
+            <a href="/projects/Hotel-Projekt/source/kontaktseite.php">Kontaktseite</a>
         </li>
         <li class="nav-item">
             <div class="login-container">
