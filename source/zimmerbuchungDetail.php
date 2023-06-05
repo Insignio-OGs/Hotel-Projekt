@@ -68,17 +68,12 @@
                 <li><i class="bx bx-tv"><span>TV</span></i></li>
             </div>
             <div class="booking-btn">
-                <button>Jetzt buchen</button>
+                <a class="reservation" href="reservation.php">Jetzt buchen</a>
             </div>
         </div>
     </section>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <h1 class="footer-h1">Das ist der Footer</h1>
-                <a href="impressum.php">Impressum</a>
-            </div>
-        </div>
-    </footer>
+    <?php
+        include("footer.php");
+    ?>
 </body>
 </html>
