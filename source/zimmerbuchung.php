@@ -228,7 +228,7 @@
         </div>
     </section>
     <?php
-        include("source/footer.php");
+        include("footer.php");
     ?>
 </body>
 </html>
