@@ -33,7 +33,7 @@
 }
 
 .nav-item:first-child {
-  margin-right: auto;
+  margin-right: -33rem;
   margin-left: 2rem;
 }
 
@@ -47,7 +47,7 @@
 }
 
 img {
-    width: 70%;
+    width: 85%;
     height: 70%;
 }
 
@@ -203,7 +203,7 @@ input {
 }
 
 .content-content-one {
-    width: 689px;
+    width: 764px;
 }
 
 .content-content-one h1 {
