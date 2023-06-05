@@ -592,7 +592,7 @@ h3 {
     width: 1rem;
 }
 
-form {
+.contactForm {
     width: 600px;
     height: 400px;
 }
@@ -705,6 +705,10 @@ select::-ms-expand {
     margin-right: 15px;
 }
 
+.header-content-test form {
+    display: flex;
+}
+=======
 .reservation {
     font-family: Montserrat, sans-serif;
     font-size: 1rem;
