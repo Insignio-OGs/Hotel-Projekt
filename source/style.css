@@ -88,7 +88,7 @@ img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 600px;
+    margin-top: 14rem;
 }
 
 .header-h1 {
@@ -101,13 +101,12 @@ img {
 
 .header-content-two {
     min-width: 70%;
-    height: 150px;
-    background-color: hsl(0deg 0% 99.14% / 11%);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
     flex-direction: column;
+    height: 4rem;
 }
 
 h2 {
@@ -885,4 +884,24 @@ h4 {
 
 header {
     overflow-y: hidden;
+}
+
+.btn-index {
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    background: #4178cd;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    width: 313px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    height: 2.8rem;
+    align-items: center;
+    border-radius: 1rem;
 }
