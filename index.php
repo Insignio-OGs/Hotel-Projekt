@@ -27,59 +27,33 @@
             </div>
             <div class="header-content-two">
                 <h2>Hier buchen Sie zum günstigsten Preis:</h2>
-                <div class="header-content-test">
-                    <div class="select">
-                        <select name="nights">
-                            <option value="nightOne">1 Nacht</option>
-                            <option value="nightTwo">2 Nächte</option>
-                            <option value="nightThree">3 Nächte</option>
-                            <option value="nightFour">4 Nächte</option>
-                        </select>
-                    </div>
-                    <div class="selectDate">
-                        <input type="date" id="start" name="trip-start" value="2021-08-01" min="2021-08-01" max="2022-12-31">
-                    </div>    
-                    <div class="selectDate">
-                        <input type="date" id="end" name="trip-end" value="2021-08-01" min="2021-08-01" max="2022-12-31">
-                    </div>
-                    <div class="select">
-                        <select name="Zimmer">
-                            <option value="ZimmerOne">1 Zimmer</option>
-                            <option value="ZimmerTwo">2 Zimmer</option>
-                            <option value="ZimmerThree">3 Zimmer</option>
-                            <option value="ZimmerFour">4 Zimmer</option>
-                        </select>
-                    </div>     
-                    <div class="select">
-                        <select name="Personen">
-                            <option value="PersonenOne">1 Person</option>
-                            <option value="PersonenTwo">2 Personen</option>
-                            <option value="PersonenThree">3 Personen</option>
-                            <option value="PersonenFour">4 Personen</option>
-                        </select>
-                    </div>    
-                    <button class="btn-primary">Jetzt buchen</button>       
-                </div>   
+                <?php include_once('source/search.php') ?>
             </div>
         </div>
     </header>
     <section>
         <div class="section-one-container main">
             <div class="content-onee">
-
+                <img src="images/edvin-johansson-rlwE8f8anOc-unsplash.jpg" alt="">
             </div>
             <div class="content-twoo">
-                
+                <div class="content-content-one">
+                    <h1>Herzlich willkommen</h1>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+                    no sea takimata sanctus est Lorem ipsum dolor sit no sea takimata sanctus est Lorem ipsum dolor sit 
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, sed a ipsam voluptatum obcaecati quod eaque quia, at voluptas corrupti, earum iste atque laudantium? Magni deserunt reiciendis iste temporibus exercitationem!
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis fuga labore quas, impedit facilis ipsa et aspernatur! Eum molestiae laboriosam, possimus iusto eligendi ea dolorum quasi nesciunt sequi! Possimus, corrupti!
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque eveniet ex hic eum omnis cumque maiores error enim harum aliquid inventore, fugit animi assumenda corporis blanditiis quaerat suscipit? Odit, impedit?
+                    os et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea     os et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci excepturi iure eum esse, tempore dolor. Eos corporis reprehenderit saepe excepturi? Ea tempora voluptate temporibus est optio dolorum vero beatae iure.
+                </p>
+                </div>
             </div>
         </div>
     </section>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <h1 class="footer-h1">Das ist der Footer</h1>
-                <a href="source/impressum.php">Impressum</a>
-            </div>
-        </div>
-    </footer>
+    <?php
+        include("source/footer.php");
+    ?>
 </body>
 </html>
