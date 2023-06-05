@@ -13,7 +13,7 @@
 
     session_start();
     if (isset($_SESSION['SESSION_EMAIL'])) {
-        header("Location: dashboard-site.php");
+        header("Location: profileSettings.php");
         die();
     }
     

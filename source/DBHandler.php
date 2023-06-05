@@ -451,7 +451,7 @@ class DBHandler
     }
 
     function getUserInfo($id = 0) {
-        $sql = 'SELECT * FROM users
+        $sql = 'SELECT id, username, role_id, address_id, first_name, email, code, type, password FROM users
                 WHERE id = ' . $id;
 
         $stmt = $this->conn->prepare($sql);
@@ -482,5 +482,40 @@ class DBHandler
         } catch (Exception $e) {
             return false;
         }
+    }
+
+    function getCarReservations($user_id = 0) {    
+        $sql = 'SELECT b.name, m.name, cr.date_start, cr.date_end, cr.insurance FROM car_reservations cr
+                INNER JOIN cars c ON cr.car_id = c.id
+                INNER JOIN models m ON c.model_id = m.id
+                INNER JOIN brands b ON m.brand_id = b.id
+                WHERE cr.user_id = '.$user_id;
+    
+        $stmt = $this->conn->prepare($sql);
+        try {
+            $stmt->execute();
+            $res = $stmt->get_result();
+        } catch (Exception $e) {
+            return false;
+        }
+        $result = $res->fetch_all();
+        return $result;
+    }
+
+    function getRoomReservations($user_id = 0) {
+        $sql = 'SELECT rt.name, r.size, rr.date_start, rr.date_end, rr.all_inclusive FROM room_reservations rr
+                INNER JOIN rooms r ON rr.room_id = r.id
+                INNER JOIN room_types rt ON r.room_type_id = rt.id
+                WHERE rr.user_id = '.$user_id;
+    
+        $stmt = $this->conn->prepare($sql);
+        try {
+            $stmt->execute();
+            $res = $stmt->get_result();
+        } catch (Exception $e) {
+            return false;
+        }
+        $result = $res->fetch_all();
+        return $result;
     }
 }

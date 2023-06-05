@@ -1,7 +1,7 @@
 <?php
     session_start();
     if (isset($_SESSION['SESSION_EMAIL'])) {
-        header("Location: dashboard-site.php");
+        header("Location: profileSettings.php");
         die();
     }
 
@@ -46,7 +46,7 @@
                     $_SESSION['SESSION_EMAIL'] = $email;
                     $_SESSION['user_id'] = $emailExists[0]['id'];
                     $_SESSION['user_type'] = $emailExists[0]['type'];
-                    header("Location: dashboard-site.php");
+                    header("Location: profileSettings.php");
                 } else {
                     // Error message
                     $msg = "<div class='alert alert-info'>Verifizieren Sie erst ihr Konto und versuchen Sie es danach erneut.</div>";
