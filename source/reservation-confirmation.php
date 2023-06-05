@@ -18,6 +18,9 @@
     <h4>Zur Buchung ausgewählt:</h4>
 
     <?php
+    if(!isset($_SESSION)){ 
+        session_start();
+    }
     require_once('include.php');
 
     $db = DBHandler::getInstance();
