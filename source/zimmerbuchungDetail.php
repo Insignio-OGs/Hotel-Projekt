@@ -49,8 +49,8 @@
                 </span>
             </div>
             <div class='zimmberbuchungInfo2'>
-                <h1>B&B Hotel Kassel-City</h1>
-                <h4>Waldauer Fußweg 3, 34123 Kassel•0561 574490</h4>
+                <h1>".$room['type']."</h1>
+                <h4>Zimmer Nummer 10".$room['id']."</h4>
                 <h5>Beschreibung</h3>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
                     invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
