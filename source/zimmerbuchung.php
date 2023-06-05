@@ -20,7 +20,7 @@
             </div>
         </div>
     </header>
-    <section>
+    <section class="zimmer">
 
             <?php
             require_once('include.php');
