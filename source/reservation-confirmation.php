@@ -42,13 +42,8 @@
 
     ?>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <h1 class="footer-h1">Das ist der Footer</h1>
-                <a href="impressum.php">Impressum</a>
-            </div>
-        </div>
-    </footer>
+    <?php
+        include("footer.php");
+    ?>
 </body>
 </html>
