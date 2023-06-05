@@ -58,12 +58,12 @@ a {
 
 .alert-success {
   background-color: #7bd67e;
-  border: 1px solid rgb(23, 218, 52);
+  border: 1px solid #17da34;
   margin-right: 64px;
 }
 
 .alert-danger {
-  background-color: rgb(245, 102, 102);
+  background-color: #f56666;
   border: 1px solid red;
   margin-right: 64px;
 }
@@ -90,12 +90,12 @@ a {
 
 .alert-success {
   background-color: #7bd67e;
-  border: 1px solid rgb(23, 218, 52);
+  border: 1px solid #17da34;
   margin-right: 64px;
 }
 
 .alert-danger {
-  background-color: rgb(245, 102, 102);
+  background-color: #f56666;
   border: 1px solid red;
   margin-right: 64px;
 }
@@ -135,24 +135,24 @@ a {
   background-color: #780ef0;
 }
 
-.btn-close {
-  background-color: transparent;
-  border: 0;
-  font-size: 35px;
-  cursor: pointer;
-  position: absolute;
-  right: 847px;
-  top: 299px;
-}
-
 .btn-close-reg {
   background-color: transparent;
   border: 0;
   font-size: 35px;
   cursor: pointer;
   position: absolute;
-  right: 847px;
-  top: 280px;
+  right: 527px;
+  top: 124px;
+}
+
+.btn-close {
+  background-color: transparent;
+  border: 0;
+  font-size: 35px;
+  cursor: pointer;
+  position: absolute;
+  right: 527px;
+  top: 139px;
 }
 
 .tbox {
@@ -252,7 +252,7 @@ i {
 
 .create-recipe__btn {
   border: 1px solid #cccccc;
-  color: rgb(64, 227, 4);
+  color: #40e304;
   font-size: 15px;
   padding: 10px 45px;
   cursor: pointer;
@@ -368,7 +368,7 @@ i {
 }
 
 .btn-product {
-  background-color: #e74011;
+  background-color: #4178cd;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -395,7 +395,7 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e74011;
+  background-color: #4178cd;
   border-radius: 40px 40px 0 0;
   position: absolute;
   width: 45px;
@@ -409,7 +409,7 @@ i {
   font-weight: bold;
 }
 .scrollUpDown__btn--visible:hover {
-  background-color: #636363;
+  background-color: #d64720;
 }
 .scrollUpDown__btn--visible:hover .bx {
   color: white;
@@ -488,7 +488,7 @@ i {
   margin-bottom: 0.5rem;
 }
 .detailview__info p {
-  color: rgb(119, 119, 119);
+  color: #777777;
 }
 .detailview__info h3 {
   margin-top: 2rem;
@@ -506,7 +506,7 @@ i {
 }
 
 .btn-product-detail {
-  background-color: #e74011;
+  background-color: #4178cd;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -544,21 +544,21 @@ i {
 body {
   --primary: #302f2f;
   --secondary: #55efc4;
-  --picture: url("../images/headerImage.jpg");
+  --picture: url("../images/pexels-asad-photo-maldives-1450353.jpg");
   --buttonAnimation: #029679;
 }
 
 body[data-theme=theme-orange] {
   --primary: #0ba0e5;
   --secondary: #0ba2cf;
-  --picture: url("../images/headerImage.jpg");
+  --picture: url("../images/pexels-asad-photo-maldives-1450353.jpg");
   --buttonAnimation: #10ecec;
 }
 
 body[data-theme=theme-purple] {
   --primary: #901ed2;
   --secondary: #b13ff3;
-  --picture: url("../images/headerImage.jpg");
+  --picture: url("../images/pexels-asad-photo-maldives-1450353.jpg");
   --buttonAnimation: #7c1ab4;
 }
 
@@ -618,7 +618,7 @@ body[data-theme=theme-purple] {
   margin-top: 2.3rem;
 }
 .changepw__btn:hover {
-  background: #636363;
+  background: #ce4c28;
 }
 .changepw__btn:active {
   top: 4px;
@@ -637,7 +637,7 @@ body[data-theme=theme-purple] {
   margin-top: 10px;
 }
 .changepw__links a:hover {
-  color: #636363;
+  color: #ce4c28;
 }
 .changepw__line {
   width: 1px;
@@ -674,21 +674,21 @@ body[data-theme=theme-purple] {
 body {
   --primary: #302f2f;
   --secondary: #55efc4;
-  --picture: url("../images/headerImage.jpg");
+  --picture: url("../images/pexels-asad-photo-maldives-1450353.jpg");
   --buttonAnimation: #029679;
 }
 
 body[data-theme=theme-orange] {
   --primary: #0ba0e5;
   --secondary: #0ba2cf;
-  --picture: url("../images/headerImage.jpg");
+  --picture: url("../images/pexels-asad-photo-maldives-1450353.jpg");
   --buttonAnimation: #10ecec;
 }
 
 body[data-theme=theme-purple] {
   --primary: #901ed2;
   --secondary: #b13ff3;
-  --picture: url("../images/headerImage.jpg");
+  --picture: url("../images/pexels-asad-photo-maldives-1450353.jpg");
   --buttonAnimation: #7c1ab4;
 }
 
@@ -751,7 +751,7 @@ body[data-theme=theme-purple] {
   margin-top: 2.3rem;
 }
 .forgotpw__btn:hover {
-  background: #636363;
+  background: #ce4c28;
 }
 .forgotpw__btn:active {
   top: 4px;
@@ -770,7 +770,7 @@ body[data-theme=theme-purple] {
   padding: 0 10px 0 10px;
 }
 .forgotpw__links a:hover {
-  color: #636363;
+  color: #ce4c28;
 }
 .forgotpw__line {
   width: 1px;
@@ -807,21 +807,21 @@ body[data-theme=theme-purple] {
 body {
   --primary: #302f2f;
   --secondary: #55efc4;
-  --picture: url("../images/headerImage.jpg");
+  --picture: url("../images/pexels-asad-photo-maldives-1450353.jpg");
   --buttonAnimation: #029679;
 }
 
 body[data-theme=theme-orange] {
   --primary: #0ba0e5;
   --secondary: #0ba2cf;
-  --picture: url("../images/headerImage.jpg");
+  --picture: url("../images/pexels-asad-photo-maldives-1450353.jpg");
   --buttonAnimation: #10ecec;
 }
 
 body[data-theme=theme-purple] {
   --primary: #901ed2;
   --secondary: #b13ff3;
-  --picture: url("../images/headerImage.jpg");
+  --picture: url("../images/pexels-asad-photo-maldives-1450353.jpg");
   --buttonAnimation: #7c1ab4;
 }
 
@@ -884,7 +884,7 @@ body[data-theme=theme-purple] {
   margin-top: 2.3rem;
 }
 .indexLogin__btn:hover {
-  background: #636363;
+  background: #ce4c28;
 }
 .indexLogin__btn:active {
   top: 4px;
@@ -903,7 +903,7 @@ body[data-theme=theme-purple] {
   margin-top: 10px;
 }
 .indexLogin__links a:hover {
-  color: #636363;
+  color: #ce4c28;
 }
 .indexLogin__line {
   width: 1px;
@@ -940,21 +940,21 @@ body[data-theme=theme-purple] {
 body {
   --primary: #302f2f;
   --secondary: #55efc4;
-  --picture: url("../images/headerImage.jpg");
+  --picture: url("../images/pexels-asad-photo-maldives-1450353.jpg");
   --buttonAnimation: #029679;
 }
 
 body[data-theme=theme-orange] {
   --primary: #0ba0e5;
   --secondary: #0ba2cf;
-  --picture: url("../images/headerImage.jpg");
+  --picture: url("../images/pexels-asad-photo-maldives-1450353.jpg");
   --buttonAnimation: #10ecec;
 }
 
 body[data-theme=theme-purple] {
   --primary: #901ed2;
   --secondary: #b13ff3;
-  --picture: url("../images/headerImage.jpg");
+  --picture: url("../images/pexels-asad-photo-maldives-1450353.jpg");
   --buttonAnimation: #7c1ab4;
 }
 
@@ -1014,7 +1014,7 @@ body[data-theme=theme-purple] {
   margin-top: 2.3rem;
 }
 .register__btn:hover {
-  background: #636363;
+  background: #ce4c28;
 }
 .register__btn:active {
   top: 4px;
@@ -1113,7 +1113,7 @@ td:nth-child(5) {
 }
 
 .btn-product-dash {
-  background-color: #e74011;
+  background-color: #4178cd;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -1127,7 +1127,7 @@ td:nth-child(5) {
 }
 
 .create-btn-product-dash {
-  background-color: #e74011;
+  background-color: #4178cd;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -1211,24 +1211,24 @@ td:nth-child(5) {
   transition: all 200ms ease-in;
 }
 .navigation__link:hover {
-  color: #636363;
+  color: #ce4c28;
 }
 .navigation__link:hover .anmelden {
   text-decoration: underline;
   text-underline-offset: 0.2em;
   text-decoration-thickness: 2.5px;
   transition: all 200ms ease-in;
-  color: #636363;
+  color: #ce4c28;
 }
 .navigation__link:hover .meinProfil {
   text-decoration: underline;
   text-underline-offset: 0.2em;
   text-decoration-thickness: 2.5px;
   transition: all 200ms ease-in;
-  color: #636363;
+  color: #ce4c28;
 }
 .navigation__link:hover .bx {
-  color: #636363;
+  color: #ce4c28;
   transition: all 200ms ease-in;
 }
 .navigation__link--btn-primary {
@@ -1319,7 +1319,7 @@ body {
 }
 
 .last {
-  margin-top: 37rem;
+  margin-top: 43rem;
 }
 
 .app {
@@ -1381,14 +1381,14 @@ Sidebar Nav
   ----------------*/
 }
 .sidebar-nav ul li a {
-  color: #707070;
+  color: #000000;
   font-size: 0.75em;
   padding: 1.05em 1em;
   position: relative;
   display: block;
 }
 .sidebar-nav ul li a:hover {
-  background-color: #636363;
+  background-color: #4178cd;
 }
 .sidebar-nav ul li i {
   font-size: 1.8em;
