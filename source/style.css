@@ -905,3 +905,15 @@ header {
     align-items: center;
     border-radius: 1rem;
 }
+
+.proInt {
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd8dc;
+    padding: 0.5rem 0;
+    width: 13.5rem;
+    background-color: #dfdfdf;
+    width: 18rem;
+}
