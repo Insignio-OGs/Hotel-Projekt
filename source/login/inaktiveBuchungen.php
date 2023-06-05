@@ -1,32 +1,3 @@
-<?php
-
-include_once('connection.php');
-if(!isset($_SESSION)){ 
-    session_start();
-}
-
-
-if(isset($_POST["submit"])) {
-    //Wenn Felder vom forumular ausgefüllt sind dann wird die Datenbank mit den neuen Daten aktualisiert
-    if(!empty($_POST['product_name']) && !empty($_POST['product_time']) && !empty($_POST['product_difficulty']) && !empty($_POST['product_img']) && !empty($_POST['data_name'])) {
-        $product_name = $_POST['product_name'];
-        $product_time = $_POST['product_time'];
-        $product_difficulty = $_POST['product_difficulty'];
-        $product_img = "./images/" . $_POST['product_img'];
-        $data_name = $_POST['data_name'];
-
-        $stmt = $con->prepare("INSERT INTO cookingrecipedb (product_name, product_time, product_difficulty, product_img, data_name) VALUES (:productname, :producttime, :productdifficulty, :productimg, :dataname)");
-        $stmt->bindParam(':productname', $product_name);
-        $stmt->bindParam(':producttime', $product_time);
-        $stmt->bindParam(':productdifficulty', $product_difficulty);
-        $stmt->bindParam(':productimg', $product_img);
-        $stmt->bindParam(':dataname', $data_name);
-        $stmt->execute();
-        header("Location: ../index.php");
-    } 
-}
-
-?>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -65,6 +36,9 @@ if(isset($_POST["submit"])) {
             </nav>
         </aside>
         <div class="dashboardContent">
+            <header>
+                <span class="presentDash">Dashboard</span>    
+            </header>
                 
         </div>
     </section>    
