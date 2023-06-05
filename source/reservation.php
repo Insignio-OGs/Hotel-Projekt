@@ -12,7 +12,7 @@
     <?php
         include("navigation.php");
     ?>
-   
+    <div class="reservation_one">
     <h2>Buchung</h2>
 
     <h4>Zur Buchung ausgewählt:</h4>
@@ -23,11 +23,11 @@
 
         $db = new DBHandler();
 
-    
+
         if(isset($_GET['room_id'])){
             $room = $db->getRow('rooms',$_GET['room_id']);
             echo('<div>');
-            //print_r($room);
+            print_r($room);
             echo('</div>');
         } else {
             $rooms = $db->getRooms();
@@ -42,14 +42,18 @@
             }
             echo ('</select>');
 
-            echo ("<input type='submit' value='Auswählen'>");
+            echo ("<input class='btnResOne' type='submit' value='Auswählen'>");
             echo ("</form></div>");
         }
-    
+
         if(isset($_GET['car_id'])){
             $car = $db->getRow('cars',$_GET['car_id']);
             echo('<div>');
             print_r($car);
+            // Gib mir das array $car in einer Liste aus
+      
+
+
             echo('</div>');
         } else {
             $cars = $db->getCars();
@@ -64,7 +68,7 @@
             }
             echo ('</select>');
 
-            echo ("<input type='submit' value='Auswählen'>");
+            echo ("<input class='btnResOne' type='submit' value='Auswählen'>");
             echo ("</form></div>");
         }
 
@@ -72,11 +76,14 @@
         echo ("<form action='reservation-confirmation.php' method='GET'>Von <input type='date' name='from_date' required> Bis <input type='date' name='until_date' required>");
         if (isset($_GET['car_id']))  echo ("<input type='hidden' name='car_id' value='".$_GET['car_id']."'> ");
         if (isset($_GET['room_id'])) echo ("<input type='hidden' name='room_id' value='".$_GET['room_id']."'> ");
-        echo ("<input type='submit' value='Weiter'> </form>");
+        echo ("<br><input class='btnRes' type='submit' value='Weiter'> </form>");
         echo('</div>');
 
 
     ?>
+        </div>
+   
+    
 
     <?php
         include("footer.php");

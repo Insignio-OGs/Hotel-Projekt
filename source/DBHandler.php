@@ -449,4 +449,38 @@ class DBHandler
 
         return true;
     }
+
+    function getUserInfo($id = 0) {
+        $sql = 'SELECT * FROM users
+                WHERE id = ' . $id;
+
+        $stmt = $this->conn->prepare($sql);
+        try {
+            $stmt->execute();
+            $res = $stmt->get_result();
+        } catch (Exception $e) {
+            return false;
+        }
+        $result = $res->fetch_all();
+        return $result;
+    }
+
+    function setUserInfo($data, $id = 0) {
+        $userinfo = $this->getUserInfo($id);
+        
+        if(password_verify($data['password'], $userinfo[0][9]) && password_verify($data['passwordcheck'], $userinfo[0][9])) {
+            $password = PASSWORD_HASH($data["passwordnew"], PASSWORD_DEFAULT);
+        } else {
+            $password = $data['password'];
+        }
+        
+        $sql = "UPDATE users SET username = '".$data['username']."', first_name = '".$data['first_name']."', last_name = '".$data['last_name']."', email = '".$data['email']."', password = '".$password."' WHERE id = $id";
+
+        $stmt = $this->conn->prepare($sql);
+        try {
+            $stmt->execute();
+        } catch (Exception $e) {
+            return false;
+        }
+    }
 }

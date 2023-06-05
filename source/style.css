@@ -88,7 +88,7 @@ img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 600px;
+    margin-top: 14rem;
 }
 
 .header-h1 {
@@ -101,13 +101,12 @@ img {
 
 .header-content-two {
     min-width: 70%;
-    height: 150px;
-    background-color: hsl(0deg 0% 99.14% / 11%);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
     flex-direction: column;
+    height: 4rem;
 }
 
 h2 {
@@ -244,7 +243,7 @@ h3 {
 /* Room Section */
 .room-product {
     width: 60%;
-    height: 390px;
+    height: 316px;
     border: 1px solid black;
     box-shadow: 0px 0px 10px #131313;
     margin-top: 6rem;
@@ -708,7 +707,7 @@ select::-ms-expand {
 .header-content-test form {
     display: flex;
 }
-=======
+
 .reservation {
     font-family: Montserrat, sans-serif;
     font-size: 1rem;
@@ -845,5 +844,64 @@ select::-ms-expand {
     margin-left: 53rem;
 }
 
+.reservation_one {
+    height: 45rem;
+    margin-left: 2.5rem;
+}
 
+.reservation_one div {
+    margin-bottom: 1rem;
+}
 
+.reservation_two {
+    height: 45rem; 
+    margin-left: 2.5rem;
+}
+
+.reservation_two div {
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+h4 {
+    margin-bottom: 1rem;
+}
+
+.btnRes {
+    margin-top: 1.5rem;
+}
+
+.btnRes:hover {
+    background-color: #d3d3d3;
+}
+
+.btnResOne:hover {
+    background-color: #d3d3d3;
+}
+
+header {
+    overflow-y: hidden;
+}
+
+.btn-index {
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    background: #4178cd;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+    width: 313px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    height: 2.8rem;
+    align-items: center;
+    border-radius: 1rem;
+}
