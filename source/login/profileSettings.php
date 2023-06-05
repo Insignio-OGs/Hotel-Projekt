@@ -4,9 +4,9 @@ if(!isset($_SESSION)){
 }
 require_once('../include.php');
 $db = new DBHandler();
-$userinfo = $db->getUserInfo(); 
+$userinfo = $db->getUserInfo($_SESSION['user_id']); 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $db->setUserInfo($_POST);
+    $db->setUserInfo($_POST, $_SESSION['user_id']);
   }
 
 ?>
@@ -25,24 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <header>
                 <span class="presentDash">Dashboard</span>    
             </header>
-            <nav class="sidebar-nav">
-            <ul>
-                <li>
-                    <a href="profileSettings.php"><i class="bx bx-user-circle"></i> <span>Profileinstellungen</span></a>
-                    <ul class="nav-flyout">
-                        <li>
-                        <a href="Buchungen.php"><i class="bx bxs-bar-chart-alt-2"></i>Inaktive Buchungen</a>
-                        </li>
-                        <li>
-                        <a href='../../index.php'><i class="bx bx-home-alt icon"></i>Home</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="last">
-                    <a href='logout.php'><i class="bx bx-log-out icon"></i> <span class="">Logout</span></a> 
-                </li>
-            </ul>
-            </nav>
+            <?php include_once('dashboard-nav.php') ?>
         </aside>
         <div>
   <h3>Profileinstellungen</h3>
