@@ -547,7 +547,7 @@ h3 {
     width: 1rem;
 }
 
-form {
+.contactForm {
     width: 600px;
     height: 400px;
 }
@@ -658,4 +658,8 @@ select::-ms-expand {
     overflow: hidden;
     border-radius: .25em;
     margin-right: 15px;
+}
+
+.header-content-test form {
+    display: flex;
 }

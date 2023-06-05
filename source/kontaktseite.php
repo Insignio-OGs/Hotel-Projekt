@@ -22,7 +22,7 @@
     <section>
         <div class="section-one-container">
             <div class="form-container-contact">
-                <form action="">
+                <form class="contactForm" action="">
                 <h1>Kontakt Formular</h1>
                     <div class="form-content">
                         <input type="text" name="" placeholder="Vorname">
