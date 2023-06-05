@@ -27,39 +27,7 @@
             </div>
             <div class="header-content-two">
                 <h2>Hier buchen Sie zum günstigsten Preis:</h2>
-                <div class="header-content-test">
-                    <div class="select">
-                        <select name="nights">
-                            <option value="nightOne">1 Nacht</option>
-                            <option value="nightTwo">2 Nächte</option>
-                            <option value="nightThree">3 Nächte</option>
-                            <option value="nightFour">4 Nächte</option>
-                        </select>
-                    </div>
-                    <div class="selectDate">
-                        <input type="date" id="start" name="trip-start" value="2021-08-01" min="2021-08-01" max="2022-12-31">
-                    </div>    
-                    <div class="selectDate">
-                        <input type="date" id="end" name="trip-end" value="2021-08-01" min="2021-08-01" max="2022-12-31">
-                    </div>
-                    <div class="select">
-                        <select name="Zimmer">
-                            <option value="ZimmerOne">1 Zimmer</option>
-                            <option value="ZimmerTwo">2 Zimmer</option>
-                            <option value="ZimmerThree">3 Zimmer</option>
-                            <option value="ZimmerFour">4 Zimmer</option>
-                        </select>
-                    </div>     
-                    <div class="select">
-                        <select name="Personen">
-                            <option value="PersonenOne">1 Person</option>
-                            <option value="PersonenTwo">2 Personen</option>
-                            <option value="PersonenThree">3 Personen</option>
-                            <option value="PersonenFour">4 Personen</option>
-                        </select>
-                    </div>    
-                    <button class="btn-primary">Jetzt buchen</button>       
-                </div>   
+                <?php include_once('source/search.php') ?>
             </div>
         </div>
     </header>
