@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
     <link href="../../dist/main.css" type="text/css" rel="stylesheet">
+    <link href="../style.css" type="text/css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -26,56 +27,62 @@
             <?php include_once('dashboard-nav.php') ?>
         </aside>
         <div class="dashboardContent">
-        <h3>Fahrzeugbuchungen</h3>
-        <div>
-            <table>
-                <thead>
-                <tr>
-                    <th>Marke</th>
-                    <th>Modell</th>
-                    <th>Von</th>
-                    <th>Bis</th>
-                    <th>Versichert</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php foreach ($cars as $car): ?>
-                    <tr>
-                    <td><?php echo $car[0]; ?></td>
-                    <td><?php echo $car[1]; ?></td>
-                    <td><?php echo $car[2]; ?></td>
-                    <td><?php echo $car[3]; ?></td>
-                    <td><?php echo $car[4]; ?></td>
-                    </tr>
-                <?php endforeach; ?>
-                </tbody>
-            </table>
-            </div>
-        </div>
-        <h3>Zimmerbuchungen</h3>
-        <div>
-            <table>
-                <thead>
-                <tr>
-                    <th>Zimmer</th>
-                    <th>Größe</th>
-                    <th>Von</th>
-                    <th>Bis</th>
-                    <th>All-Inclusive</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php foreach ($rooms as $room): ?>
-                    <tr>
-                    <td><?php echo $room[0]; ?></td>
-                    <td><?php echo $room[1]; ?></td>
-                    <td><?php echo $room[2]; ?></td>
-                    <td><?php echo $room[3]; ?></td>
-                    <td><?php echo $room[4]; ?></td>
-                    </tr>
-                <?php endforeach; ?>
-                </tbody>
-            </table>
+        <div class="buchungstabelle">
+            <div class="tabelleOne">
+            <h3>Fahrzeugbuchungen</h3>
+                <div>
+                    <table class="boostrap4_table_head_dark_striped">
+                        <thead>
+                        <tr>
+                            <th>Marke</th>
+                            <th>Modell</th>
+                            <th>Von</th>
+                            <th>Bis</th>
+                            <th>Versichert</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($cars as $car): ?>
+                            <tr>
+                            <td><?php echo $car[0]; ?></td>
+                            <td><?php echo $car[1]; ?></td>
+                            <td><?php echo $car[2]; ?></td>
+                            <td><?php echo $car[3]; ?></td>
+                            <td><?php echo $car[4]; ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+            <div class="tabelleTwo">
+            <h3>Zimmerbuchungen</h3>
+                <div>
+                    <table class="boostrap4_table_head_dark_striped">
+                        <thead>
+                        <tr>
+                            <th>Zimmer</th>
+                            <th>Größe</th>
+                            <th>Von</th>
+                            <th>Bis</th>
+                            <th>All-Inclusive</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($rooms as $room): ?>
+                            <tr>
+                            <td><?php echo $room[0]; ?></td>
+                            <td><?php echo $room[1]; ?></td>
+                            <td><?php echo $room[2]; ?></td>
+                            <td><?php echo $room[3]; ?></td>
+                            <td><?php echo $room[4]; ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
             </div>
         </div>
     </section>    

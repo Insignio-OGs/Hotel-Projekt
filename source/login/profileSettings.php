@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
     <link href="../../dist/main.css" type="text/css" rel="stylesheet">
+    <link href="../style.css" type="text/css" rel="stylesheet">
     <title>Profileinstellungen</title>
 </head>
 <body>
@@ -27,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </header>
             <?php include_once('dashboard-nav.php') ?>
         </aside>
-        <div>
+        <div class="proDash">
   <h3>Profileinstellungen</h3>
   <form method="POST" action="profileSettings.php">
   <ul>
@@ -36,26 +37,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     </li>
     <li>
-      <input placeholder="Vorname" type="text" id="first_name" name="first_name" value="<?php echo $userinfo[0][4]; ?>">
+      <input placeholder="Vorname" class="proInt" type="text" id="first_name" name="first_name" value="<?php echo $userinfo[0][4]; ?>">
 
     </li>
     <li>
-      <input placeholder="Nachname" type="text" id="last_name" name="last_name" value="<?php echo $userinfo[0][5]; ?>">
+      <input placeholder="Nachname" class="proInt" type="text" id="last_name" name="last_name" value="<?php echo $userinfo[0][5]; ?>">
 
     </li>
     <li>
-      <input placeholder="E-Mail" type="text" id="email" name="email" value="<?php echo $userinfo[0][6]; ?>">
+      <input placeholder="E-Mail" class="proInt" type="text" id="email" name="email" value="<?php echo $userinfo[0][6]; ?>">
 
     </li>
     <li>
-      <input placeholder="Passwort" type="password" id="password" name="password">
+      <input placeholder="Passwort" class="proInt" type="password" id="password" name="password">
     </li>
     <li>
-      <input placeholder="Passwort erneut eingeben" type="password" id="passwordcheck" name="passwordcheck">
+      <input placeholder="Passwort erneut eingeben" class="proInt" type="password" id="passwordcheck" name="passwordcheck">
     </li>
     <li>
-      <input placeholder="Neues Passwort" type="password" id="passwordnew" name="passwordnew">
-      <br><button type="submit" name="Speichern" value="Speichern">Speichern</button>
+      <input placeholder="Neues Passwort" class="proInt" type="password" id="passwordnew" name="passwordnew">
+      <br><button class="btn-dash-form" type="submit" name="Speichern" value="Speichern">Speichern</button>
     </li>
   </ul>
 </form>
