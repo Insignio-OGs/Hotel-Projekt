@@ -26,8 +26,8 @@
                 <h2 class="header-h2">Das Hotel mit den besten Stränden</h2>
             </div>
             <div class="header-content-two">
-                <h2>Hier buchen Sie zum günstigsten Preis:</h2>
-                <?php include_once('source/search.php') ?>
+                <h2>Hier buchen Sie zum günstigsten Preis!</h2>
+                <a href="source/zimmerbuchung.php" class="btn-primary">Jetzt Buchen</a>
             </div>
         </div>
     </header>
