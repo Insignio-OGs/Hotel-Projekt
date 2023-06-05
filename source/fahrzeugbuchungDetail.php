@@ -9,31 +9,9 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <nav>
-        <ul class="nav-list">
-            <li class="nav-item">
-                <img src="../images/iconNav.png" alt="">
-            </li>
-            <li class="nav-item">
-                <a href="../index.php">Startseite</a>
-            </li>
-            <li class="nav-item">
-                <a href="fahrzeugbuchung.php">Fahrzeugbuchung</a>
-            </li>
-            <li class="nav-item">
-                <a href="zimmerbuchung.php">Zimmerbuchung</a>
-            </li>
-            <li class="nav-item">
-                <a href="kontaktseite.php">Kontaktseite</a>
-            </li>
-            <li class="nav-item">
-                <div class="login-container">
-                    <img class="loginLogo" src="../images/iconLogin.png" alt="">
-                    <a class="loginText" href="login.php"  name="submit">Login</a>
-                </div>
-            </li>
-        </ul>
-    </nav>
+    <?php
+        include("navigation.php");
+    ?>
     <section>
         <div class="zimmerbuchungDetail">
             <div class="zimmberbuchungImgGallery">
@@ -76,17 +54,12 @@
                 <li><i class='bx bx-phone'><span>Service & Know-How</span></i></li>
             </div>
             <div class="booking-btn">
-                <button>Jetzt mieten</button>
+                <a class="reservation" href="reservation.php">Jetzt mieten</a>
             </div>
         </div>
     </section>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <h1 class="footer-h1">Das ist der Footer</h1>
-                <a href="impressum.php">Impressum</a>
-            </div>
-        </div>
-    </footer>
+    <?php
+        include("footer.php");
+    ?>
 </body>
 </html>

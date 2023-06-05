@@ -66,20 +66,21 @@
     <section>
         <div class="section-one-container main">
             <div class="content-onee">
-
+                <img src="images/edvin-johansson-rlwE8f8anOc-unsplash.jpg" alt="">
             </div>
             <div class="content-twoo">
-                
+                <div class="content-content-one">
+                    <h1>Herzlich willkommen</h1>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+                    no sea takimata sanctus est Lorem ipsum dolor sit no sea takimata sanctus est Lorem ipsum dolor sit 
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet,
+                    </p>
+                </div>
             </div>
         </div>
     </section>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <h1 class="footer-h1">Das ist der Footer</h1>
-                <a href="source/impressum.php">Impressum</a>
-            </div>
-        </div>
-    </footer>
+    <?php
+        include("source/footer.php");
+    ?>
 </body>
 </html>
