@@ -27,7 +27,7 @@
         if(isset($_GET['room_id'])){
             $room = $db->getRow('rooms',$_GET['room_id']);
             echo('<div>');
-            print_r($room);
+            //print_r($room);
             echo('</div>');
         } else {
             $rooms = $db->getRooms();
