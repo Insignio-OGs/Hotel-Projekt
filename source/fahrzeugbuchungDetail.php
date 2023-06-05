@@ -78,7 +78,7 @@
             ");
 
             echo("
-            <a href='reservation.php?car_id=".$car['ID']."' class='btn-car-product'>Auto auswählen</a>
+            <a href='reservation.php?car_id=".$car['ID']."' class='btn-car-product'>Auto buchen</a>
             ");
 
             ?>
