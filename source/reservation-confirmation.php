@@ -12,8 +12,8 @@
     <?php
         include("navigation.php");
     ?>
-   
-    <h2>Buchung</h2>
+    <div class="reservation_two">
+        <h2>Buchung</h2>
 
     <h4>Zur Buchung ausgewählt:</h4>
 
@@ -41,6 +41,7 @@
     }
 
     ?>
+    </div>
 
     <?php
         include("footer.php");
