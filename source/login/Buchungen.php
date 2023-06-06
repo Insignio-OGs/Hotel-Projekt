@@ -16,7 +16,7 @@
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
     <link href="../../dist/main.css" type="text/css" rel="stylesheet">
     <link href="../style.css" type="text/css" rel="stylesheet">
-    <title>Document</title>
+    <title>Profil Buchungen</title>
 </head>
 <body>
     <section class="app">
